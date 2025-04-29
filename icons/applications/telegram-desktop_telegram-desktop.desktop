@@ -1,0 +1,22 @@
+[Desktop Entry]
+X-SnapInstanceName=telegram-desktop
+Name=Telegram
+Comment=New era of messaging
+X-SnapAppName=telegram-desktop
+Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/telegram-desktop_telegram-desktop.desktop /snap/bin/telegram-desktop -- %u
+Icon=/home/polaroid/.dotfiles/icons/images/telegram-desktop.svg
+Terminal=false
+StartupWMClass=TelegramDesktop
+Type=Application
+Categories=Chat;Network;InstantMessaging;Qt;
+MimeType=x-scheme-handler/tg;x-scheme-handler/tonsite;
+Keywords=tg;chat;im;messaging;messenger;sms;tdesktop;
+Actions=quit;
+SingleMainWindow=true
+
+[Desktop Action quit]
+X-SnapAppName=telegram-desktop
+Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/telegram-desktop_telegram-desktop.desktop /snap/bin/telegram-desktop -quit
+Name=Quit Telegram
+Icon=/home/polaroid/.dotfiles/icons/images/telegram-desktop.svg
+

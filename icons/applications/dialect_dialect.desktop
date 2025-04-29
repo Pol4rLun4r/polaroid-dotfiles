@@ -1,0 +1,14 @@
+[Desktop Entry]
+X-SnapInstanceName=dialect
+Version=1.0
+Type=Application
+Terminal=false
+StartupNotify=true
+X-SnapAppName=dialect
+Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/dialect_dialect.desktop /snap/bin/dialect
+Name=Dialect
+Comment=Translate between languages
+Categories=Network;GTK;
+Icon=/home/polaroid/.dotfiles/icons/images/dialect.svg
+Keywords=translate;translation;
+

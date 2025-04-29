@@ -1,0 +1,11 @@
+[Desktop Entry]
+X-SnapInstanceName=chatgpt-desktop
+Name=ChatGPT Desktop
+X-SnapAppName=chatgpt-desktop
+Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/chatgpt-desktop_chatgpt-desktop.desktop /snap/bin/chatgpt-desktop %U
+Terminal=false
+Type=Application
+Icon=/home/polaroid/.dotfiles/icons/images/chatgpt-desktop.svg
+StartupWMClass=ChatGPT Desktop
+Comment=Access ChatGPT from anywhere, anytime!
+Categories=Utility;

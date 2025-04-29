@@ -1,0 +1,12 @@
+[Unit]
+Description=Recarrega extensões do GNOME de forma segura
+After=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/user/.dotfiles/gnome/fix-screen-lock/reload-extensions-busctl.sh
+Environment=DISPLAY=:0
+Environment=XDG_RUNTIME_DIR=/run/user/%U
+
+[Install]
+WantedBy=default.target

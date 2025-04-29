@@ -1,0 +1,9 @@
+# my shortcuts
+alias c='clear'
+alias update='sudo apt update && sudo apt upgrade -y'
+alias dots='cd ~/.dotfiles'
+alias desktop='cd ~/Desktop'
+
+# icones
+alias fix-icons='~/.dotfiles/icons/main.sh'
+alias change-icon='~/.dotfiles/icons/change-icon/main.sh'
