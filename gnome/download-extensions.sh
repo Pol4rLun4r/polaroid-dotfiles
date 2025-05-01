@@ -42,7 +42,6 @@ while read -r uuid; do
 
     # diretório onde fica a extensão
     EXT_DIR="$HOME/.local/share/gnome-shell/extensions/$uuid"
-    mkdir -p "$EXT_DIR"
 
     # verifica se a extensão já existe
      if [ -d "$EXT_DIR" ]; then
@@ -66,6 +65,7 @@ while read -r uuid; do
     fi
 
     # extrai a arquivo da extensão
+    mkdir -p "$EXT_DIR"
     if ! unzip -qo "$TEMP_FILE" -d "$EXT_DIR"; then
         echo "❌ Falha ao extrair o arquivo: $TEMP_FILE"
         continue
@@ -109,7 +109,6 @@ if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
     exit 0
     # gnome-session-quit --logout --no-prompt
 else
-    echo -e "\n⚠️  Reinicie a sessão em outro momento para finalizar a instalação das extensões\n"
+    echo -e "\n⚠️  Reinicie a sessão em outro momento para finalizar a instalação das extensões"
     sleep 5
-    echo "<=============================================>"
 fi
