@@ -6,7 +6,7 @@ if ! command -v snap &> /dev/null; then
     echo "📦 Snap não encontrado. Instalando..."
     sudo apt update && sudo apt install -y snapd
 else
-    echo "✅ Snap já está instalado."
+    echo -e "✅ Snap já está instalado.\n"
 fi
 
 # Verifica se o arquivo de apps existe

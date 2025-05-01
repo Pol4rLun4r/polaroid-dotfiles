@@ -19,7 +19,7 @@ if ! flatpak remotes | grep -q flathub; then
     echo "➕ Adicionando o repositório Flathub..."
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 else
-    echo "✅ Flathub já está configurado."
+    echo -e "✅ Flathub já está configurado.\n"
 fi
 
 LISTA="$CURRENT_DIR/flatpaks.list"

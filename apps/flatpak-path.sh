@@ -38,5 +38,5 @@ if ! grep -q "XDG_DATA_DIRS=" "$PROFILE"; then
         exit 1
     fi
 else
-    echo "ℹ️ A variável XDG_DATA_DIRS já está configurada no $PROFILE"
+    echo -e "✅ A variável XDG_DATA_DIRS já está configurada no $PROFILE\n"
 fi
