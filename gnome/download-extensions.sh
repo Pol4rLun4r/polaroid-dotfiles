@@ -1,30 +1,30 @@
 #!/bin/bash
 
-# script para baixar e instalar extensões do GNOME
-
-# solicita senha do sudo para manter a sessão ativa
-sudo -v
+# Script que faz o download, extrai e compila a extensões
 
 # Diretório atual
 CURRENT_DIR=$(dirname $(realpath "$0"))
 
 # caminho do arquivo com UUIDs das extensões
-LIST="$CURRENT_DIR/extensions-enabled.txt"
+LIST="$CURRENT_DIR/extensions-list.txt"
 
 # Obtém versão major do GNOME Shell (ex: 44, 45)
 SHELL_VERSION=$(gnome-shell --version | cut -d ' ' -f 3 | cut -d '.' -f 1)
 
 # Verifica se o arquivo existe
 if [ ! -f "$LIST" ]; then
-    echo "❌ Arquivo extensions-enabled.txt não encontrado!"
+    echo "❌ Arquivo extensions-list.txt não encontrado!"
     exit 1
 fi
 
+# cria um arquivo que lista as extensões que tiveram exito ao serem baixadas
+EXTRACTED_EXT="$CURRENT_DIR/extracted-extensions.txt"
+
+# cria ou zera o arquivo    
+> "$EXTRACTED_EXT"
+
 # cria pasta temporária para downloads
 mkdir -p /tmp/ext
-
-echo -e "📋 Instalando extensões do arquivo extensions-enabled.txt...\n"
-echo -e "🔍 Procurando extensões...\n"
 
 while read -r uuid; do
     # busca info da extensão
@@ -43,7 +43,6 @@ while read -r uuid; do
     # verifica se a extensão já existe
     if [ -f "$TEMP_FILE" ]; then
         echo "💾 A seguinte extensão já foi baixada: $name_file"
-        continue
     else
         curl -sL \
         -H "User-Agent: Mozilla/5.0" \
@@ -70,22 +69,12 @@ while read -r uuid; do
 
         rm -f "$TEMP_FILE"
     fi
+
+    # registra a extensão que teve sucesso ao extrair
+    echo "$uuid" >> "$EXTRACTED_EXT"
+
 done < "$LIST"
 
-# {
-
-#     if [ ! -d "$EXT_DIR" ]; then
-#         echo "❗ Falha ao extrair: $name_file"
-#         continue
-#     fi
-
-#     if gnome-extensions enable "$uuid" 2> /dev/null; then
-#         echo "✅ $uuid ativada com sucesso!"
-#     else
-#         echo "❌ Falha ao ativar a extensão '$uuid'."
-#     fi
-# }
-
-
-echo -e "\n✅ Todas as extensões processadas!"
-echo "💽 Talvez seja necessário reiniciar a sessão para que todas as extensões funcionem corretamente."
+# arquivo que informa o script qual etapa ele deve seguir, fazer download ou instalar
+STATE="$CURRENT_DIR/state.txt"
+echo "downloaded" > "$STATE"
