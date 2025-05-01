@@ -1,13 +1,18 @@
 # Script principal de instalação de todos os demais instaladores deste diretório
-sudo echo "" #autoriza o sudo no inicio da linha
 
-DIR="$HOME/.dotfiles/apps"
+sudo -v #autoriza o sudo no inicio da linha
 
-# Corrige possível erro das pastas do flatpak
-bash "$DIR/fix-flatpak-path.sh"
+read -p "⬇️ deseja fazer o download dos aplicativos? isso pode levar um tempo (y/n):" CONFIRM
 
-# Instala os Apps Snap
-bash "$DIR/install-snaps.sh"
+if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
 
-# Instala os Apps Flatpak
-bash "$DIR/install-flatpaks.sh"
+    CURRENT_DIR=$(dirname $(realpath "$0"))
+
+    # Instala os Apps Snap
+    bash "$CURRENT_DIR/install-snaps.sh"
+
+    # Instala os Apps Flatpak
+    bash "$CURRENT_DIR/install-flatpaks.sh"
+else
+    echo "📌 download dos aplicativos pulado"
+fi
