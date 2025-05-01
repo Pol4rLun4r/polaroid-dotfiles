@@ -106,8 +106,7 @@ if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
     echo -e "\n🚪 Saindo da sessão em 10 segundos, após isso inicie o script novamente para concluir a instalação"
     sleep 10
 
-    exit 0
-    # gnome-session-quit --logout --no-prompt
+    gnome-session-quit --logout --no-prompt
 else
     echo -e "\n⚠️  Reinicie a sessão em outro momento para finalizar a instalação das extensões"
     sleep 5
