@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Diretório atual
+CURRENT_DIR=$(dirname $(realpath "$0"))
+
+# Corrige possível erro das pastas do flatpak
+bash "$CURRENT_DIR/flatpak-path.sh"
+
 # Verifica se o Flatpak está instalado
 if ! command -v flatpak &> /dev/null; then
     echo "📦 Flatpak não encontrado. Instalando..."
@@ -16,7 +22,7 @@ else
     echo "✅ Flathub já está configurado."
 fi
 
-LISTA="$HOME/.dotfiles/apps/flatpaks.list"
+LISTA="$CURRENT_DIR/flatpaks.list"
 if [ ! -f "$LISTA" ]; then
     echo "❌ Arquivo $LISTA não encontrado!"
     exit 1
