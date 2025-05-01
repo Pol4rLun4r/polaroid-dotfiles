@@ -18,7 +18,7 @@ STATE="$CURRENT_DIR/state.txt"
 if [ ! -f "$STATE" ] || ! grep -q "downloaded" "$STATE"; then
     bash "$CURRENT_DIR/download-extensions.sh"
 else
-    echo "começando instalação..."
+    bash "$CURRENT_DIR/install-extensions.sh"
 fi
 
 # compile-extensions
