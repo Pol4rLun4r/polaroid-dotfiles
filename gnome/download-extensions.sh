@@ -40,41 +40,76 @@ while read -r uuid; do
     TEMP_FILE="/tmp/ext/$name_file.zip"
     download_url="https://extensions.gnome.org/$info"
 
+    # diretório onde fica a extensão
+    EXT_DIR="$HOME/.local/share/gnome-shell/extensions/$uuid"
+    mkdir -p "$EXT_DIR"
+
     # verifica se a extensão já existe
-    if [ -f "$TEMP_FILE" ]; then
-        echo "💾 A seguinte extensão já foi baixada: $name_file"
-    else
-        curl -sL \
-        -H "User-Agent: Mozilla/5.0" \
-        -H "Referer: https://extensions.gnome.org/" \
-        "$download_url" \
-        -o "$TEMP_FILE"
-
-        # verifica se teve sucesso ao baixar
-        if [ -f "$TEMP_FILE" ]; then
-            echo "✅ Sucesso ao baixar: $name_file"
-        else
-            echo "❗ Falha ao baixar: $name_file"
-            continue
-        fi
-
-        # extrai a arquivo da extensão
-        EXT_DIR="$HOME/.local/share/gnome-shell/extensions/$uuid"
-        mkdir -p "$EXT_DIR"
-
-        if ! unzip -qo "$TEMP_FILE" -d "$EXT_DIR"; then
-            echo "❌ Falha ao extrair o arquivo: $TEMP_FILE"
-            continue
-        fi
-
-        rm -f "$TEMP_FILE"
+     if [ -d "$EXT_DIR" ]; then
+        echo "📦 Extensão já baixada: $name_file"
+        echo "$uuid" >> "$EXTRACTED_EXT"
+        continue
     fi
+
+    curl -sL \
+    -H "User-Agent: Mozilla/5.0" \
+    -H "Referer: https://extensions.gnome.org/" \
+    "$download_url" \
+    -o "$TEMP_FILE"
+
+    # verifica se teve sucesso ao baixar
+    if [ -f "$TEMP_FILE" ]; then
+        echo "✅ Sucesso ao baixar: $name_file"
+    else
+        echo "❗ Falha ao baixar: $name_file"
+        continue
+    fi
+
+    # extrai a arquivo da extensão
+    if ! unzip -qo "$TEMP_FILE" -d "$EXT_DIR"; then
+        echo "❌ Falha ao extrair o arquivo: $TEMP_FILE"
+        continue
+    fi
+
+    rm -f "$TEMP_FILE"    
 
     # registra a extensão que teve sucesso ao extrair
     echo "$uuid" >> "$EXTRACTED_EXT"
 
 done < "$LIST"
 
+# compilar esquemas GSettings, se houver
+compile-extension() {
+    local UUID=$1 # uuid da extensão
+    local EXTENSION_DIR="$HOME/.local/share/gnome-shell/extensions/$UUID" # diretório da extensão
+    local SCHEMA_DIR="$EXTENSION_DIR/schemas"
+
+    if [ -d "$SCHEMA_DIR" ]; then
+        glib-compile-schemas "$SCHEMA_DIR"
+    fi
+}
+
+while read -r uuid; do
+    compile-extension "$uuid"
+done < "$EXTRACTED_EXT"
+
 # arquivo que informa o script qual etapa ele deve seguir, fazer download ou instalar
 STATE="$CURRENT_DIR/state.txt"
 echo "downloaded" > "$STATE"
+
+echo -e "✅ Processo de download e compilação finalizado!\n"
+
+echo "⚠️  É preciso reiniciar a sessão para que todas as extensões funcionem corretamente, salve as tarefas atuais antes de prosseguir"
+read -p "deseja reiniciar? note que ao pular essa etapa as extensões não serão instaladas (y/n):" CONFIRM
+
+if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
+    echo -e "\n🚪 Saindo da sessão em 10 segundos, após isso inicie o script novamente para concluir a instalação"
+    sleep 10
+
+    exit 0
+    # gnome-session-quit --logout --no-prompt
+else
+    echo -e "\n⚠️  Reinicie a sessão em outro momento para finalizar a instalação das extensões\n"
+    sleep 5
+    echo "<=============================================>"
+fi

@@ -24,4 +24,3 @@ fi
 # compile-extensions
 
 echo -e "\n✅ Todas as extensões processadas!"
-echo "💽 Talvez seja necessário reiniciar a sessão para que todas as extensões funcionem corretamente."
