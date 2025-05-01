@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Script principal de instalação de todos os demais instaladores deste diretório
 
 sudo -v #autoriza o sudo no inicio da linha
