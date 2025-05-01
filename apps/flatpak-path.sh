@@ -35,7 +35,7 @@ if ! grep -q "XDG_DATA_DIRS=" "$PROFILE"; then
 
     else
         echo "❗ processo de instalação dos flatpaks cancelada"
-        exit 1
+        exit 0
     fi
 else
     echo -e "✅ A variável XDG_DATA_DIRS já está configurada no $PROFILE\n"
