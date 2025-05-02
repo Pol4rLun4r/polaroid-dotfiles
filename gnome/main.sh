@@ -33,4 +33,7 @@ else
     bash "$CURRENT_DIR/download-install/install-extensions.sh"
 fi
 
+# aplicar correção da tela de bloqueio
+bash "$CURRENT_DIR/fix-screen-lock/fix-gnome-screen.sh"
+
 echo -e "\n✅ Todas as extensões processadas!"
