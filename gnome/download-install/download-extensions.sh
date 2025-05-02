@@ -7,11 +7,7 @@ AUTO_CONFIRM=false
 
 # Lê a flag -y, se passada
 while getopts ":y" opt; do
-  case $opt in
-    y)
-      AUTO_CONFIRM=true
-      ;;
-  esac
+  [[ $opt == "y" ]] && AUTO_CONFIRM=true
 done
 
 # Diretório atual
