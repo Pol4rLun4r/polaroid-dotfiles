@@ -106,7 +106,7 @@ while read -r uuid; do
 done < "$EXTRACTED_EXT"
 
 # arquivo que informa o script qual etapa ele deve seguir, fazer download ou instalar
-STATE="$CURRENT_DIR/state.txt"
+STATE="$CURRENT_DIR/../state.txt"
 echo "downloaded" > "$STATE"
 
 echo -e "✅ Processo de download e compilação finalizado!\n"
@@ -126,6 +126,7 @@ if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
     sleep 10
 
     gnome-session-quit --logout --no-prompt
+    exit 0
 else
     echo -e "\n⚠️  Reinicie a sessão em outro momento para finalizar a instalação das extensões"
     echo "aguarde..."

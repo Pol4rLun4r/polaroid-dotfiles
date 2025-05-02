@@ -10,11 +10,7 @@ AUTO_CONFIRM=""
 
 # Lê as opções
 while getopts ":y" opt; do
-  case $opt in
-    y)
-      AUTO_CONFIRM="-y"
-      ;;
-  esac
+  [[ $opt == "y" ]] && AUTO_CONFIRM="-y"
 done
 
 # Diretório atual
@@ -24,19 +20,21 @@ echo -e "📋 Instalando extensões do arquivo extensions-list.txt...\n"
 echo -e "🔍 Procurando extensões...\n"
 
 # arquivo que informa o script qual etapa ele deve seguir, fazer download ou instalar
-STATE="$CURRENT_DIR/download-install/state.txt"
+STATE="$CURRENT_DIR/state.txt"
 
-# verifica se já foi feito o download das extensões, se sim vai pra próxima etapa de instalar elas
-if [ ! -f "$STATE" ] || ! grep -q "downloaded" "$STATE"; then
-    bash "$CURRENT_DIR/download-install/download-extensions.sh" $AUTO_CONFIRM
-else
-    bash "$CURRENT_DIR/download-install/install-extensions.sh"
-fi
+# função para verificar e executar etapa se necessário
+run_if_not_done() {
+  local step_name=$1
+  local script_path=$2
+  if [ ! -f "$STATE" ] || ! grep -q "$step_name" "$STATE"; then
+    bash "$script_path" $AUTO_CONFIRM
+  fi
+}
 
-# aplicar correção da tela de bloqueio
-bash "$CURRENT_DIR/fix-screen-lock/fix-gnome-screen-lock.sh"
-
-# restaura configurações das extensões
-bash "$CURRENT_DIR/backup-restore/extensions-restore.sh" $AUTO_CONFIRM
+# executa etapas conforme necessário
+run_if_not_done "downloaded" "$CURRENT_DIR/download-install/download-extensions.sh"
+run_if_not_done "installed" "$CURRENT_DIR/download-install/install-extensions.sh"
+run_if_not_done "fix-screen" "$CURRENT_DIR/fix-screen-lock/fix-gnome-screen-lock.sh"
+run_if_not_done "ext-restore" "$CURRENT_DIR/backup-restore/extensions-restore.sh"
 
 echo -e "\n✅ Todas as extensões processadas!"

@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Diretório atual
+CURRENT_DIR=$(dirname $(realpath "$0"))
+
+STATE="$CURRENT_DIR/../state.txt"
+echo "fix-screen" >> "$STATE"
+
 echo -e "\n🚀 Aplicando correções para bloqueio de tela no GNOME..."
 
 # Evitar suspensão automática (AC = energia ligada)

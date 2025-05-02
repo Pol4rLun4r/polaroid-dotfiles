@@ -30,6 +30,9 @@ else
     echo "✅ Restauração das configurações de extensões concluída"
 fi
 
+STATE="$CURRENT_DIR/../state.txt"
+echo "ext-restore" >> "$STATE"
+
 if [ "$AUTO_CONFIRM" = true ]; then
     echo -e "\n🚪 Reinício automático da sessão em 10 segundos, após isso inicie o script novamente para continuar com as demais automações"
     sleep 10
@@ -45,6 +48,7 @@ if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
     sleep 10
 
     gnome-session-quit --logout --no-prompt
+    exit 0
 else
     echo -e "\n⚠️  Reinicie a sessão em outro momento para finalizar as configurações das extensões"
     echo "aguarde..."

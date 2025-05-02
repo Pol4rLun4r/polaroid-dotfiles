@@ -27,3 +27,7 @@ while read -r uuid; do
         sleep 3
     fi
 done < "$EXTRACTED_EXT"
+
+# arquivo que informa o script qual etapa ele deve seguir
+STATE="$CURRENT_DIR/../state.txt"
+echo "installed" >> "$STATE"
