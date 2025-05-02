@@ -5,6 +5,18 @@
 # solicita senha do sudo para manter a sessão ativa
 sudo -v
 
+# Flag de confirmação automática
+AUTO_CONFIRM=""
+
+# Lê as opções
+while getopts ":y" opt; do
+  case $opt in
+    y)
+      AUTO_CONFIRM="-y"
+      ;;
+  esac
+done
+
 # Diretório atual
 CURRENT_DIR=$(dirname $(realpath "$0"))
 
@@ -12,15 +24,13 @@ echo -e "📋 Instalando extensões do arquivo extensions-list.txt...\n"
 echo -e "🔍 Procurando extensões...\n"
 
 # arquivo que informa o script qual etapa ele deve seguir, fazer download ou instalar
-STATE="$CURRENT_DIR/state.txt"
+STATE="$CURRENT_DIR/download-install/state.txt"
 
 # verifica se já foi feito o download das extensões, se sim vai pra próxima etapa de instalar elas
 if [ ! -f "$STATE" ] || ! grep -q "downloaded" "$STATE"; then
-    bash "$CURRENT_DIR/download-extensions.sh"
+    bash "$CURRENT_DIR/download-install/download-extensions.sh" $AUTO_CONFIRM
 else
-    bash "$CURRENT_DIR/install-extensions.sh"
+    bash "$CURRENT_DIR/download-install/install-extensions.sh"
 fi
-
-# compile-extensions
 
 echo -e "\n✅ Todas as extensões processadas!"

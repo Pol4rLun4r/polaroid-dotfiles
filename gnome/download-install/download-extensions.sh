@@ -2,6 +2,18 @@
 
 # Script que faz o download, extrai e compila a extensões
 
+# Flag de confirmação automática
+AUTO_CONFIRM=false
+
+# Lê a flag -y, se passada
+while getopts ":y" opt; do
+  case $opt in
+    y)
+      AUTO_CONFIRM=true
+      ;;
+  esac
+done
+
 # Diretório atual
 CURRENT_DIR=$(dirname $(realpath "$0"))
 
@@ -99,6 +111,13 @@ echo "downloaded" > "$STATE"
 
 echo -e "✅ Processo de download e compilação finalizado!\n"
 
+if [ "$AUTO_CONFIRM" = true ]; then
+    echo -e "\n🚪 Reinício automático da sessão em 10 segundos, após isso inicie o script novamente para concluir a instalação"
+    sleep 10
+    gnome-session-quit --logout --no-prompt
+    exit 0
+fi
+
 echo "⚠️  É preciso reiniciar a sessão para que todas as extensões funcionem corretamente, salve as tarefas atuais antes de prosseguir"
 read -p "deseja reiniciar? note que ao pular essa etapa as extensões não serão instaladas (y/n):" CONFIRM
 
@@ -109,5 +128,6 @@ if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
     gnome-session-quit --logout --no-prompt
 else
     echo -e "\n⚠️  Reinicie a sessão em outro momento para finalizar a instalação das extensões"
+    echo "aguarde..."
     sleep 5
 fi
