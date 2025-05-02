@@ -1,0 +1,478 @@
+[arcmenu]
+arc-menu-icon=71
+custom-menu-button-icon-size=19.0
+dash-to-panel-standalone=false
+force-menu-location='Off'
+hide-overview-on-startup=false
+menu-arrow-rise=(false, 6)
+menu-background-color='rgba(28,28,28,0.98)'
+menu-border-color='rgb(63,62,64)'
+menu-button-appearance='None'
+menu-button-icon='Menu_Icon'
+menu-button-middle-click-action='ArcMenu'
+menu-font-size=11
+menu-foreground-color='rgb(211,218,227)'
+menu-item-active-bg-color='rgba(228,228,226,0.15)'
+menu-item-active-fg-color='rgb(255,255,255)'
+menu-item-hover-bg-color='rgba(238,238,236,0.08)'
+menu-item-hover-fg-color='rgb(255,255,255)'
+menu-item-icon-size='Default'
+menu-layout='Runner'
+menu-separator-color='rgb(63,62,64)'
+menu-themes=[['ArcMenu Style', 'rgba(48,48,49,0.98)', 'rgb(223,223,223)', 'rgb(60,60,60)', '1', '14', '11', 'rgba(255,255,255,0.1)', 'rgb(21,83,158)', 'rgb(255,255,255)', 'rgb(25,98,163)', 'rgb(255,255,255)'], ['Simply Dark', 'rgba(28,28,28,0.98)', 'rgb(211,218,227)', 'rgb(63,62,64)', '1', '14', '11', 'rgb(63,62,64)', 'rgba(238,238,236,0.08)', 'rgb(255,255,255)', 'rgba(228,228,226,0.15)', 'rgb(255,255,255)'], ['Dark Blue', 'rgb(30,37,41)', 'rgb(189,230,251)', 'rgb(41,50,55)', '1', '14', '11', 'rgba(99,99,98,0.56)', 'rgba(189,230,251,0.08)', 'rgb(189,230,251)', 'rgba(189,230,251,0.15)', 'rgb(189,230,251)'], ['Light Blue', 'rgb(245,247,250)', 'rgb(18,51,84)', 'rgba(18,51,84,0.2)', '1', '14', '11', 'rgba(18,51,84,0.15)', 'rgba(18,51,84,0.08)', 'rgb(18,51,84)', 'rgba(18,51,84,0.15)', 'rgb(18,51,84)'], ['polarTheme', 'rgba(48,48,49,0.98)', 'rgb(223,223,223)', 'rgb(60,60,60)', '1', '14', '13', 'rgba(255,255,255,0.1)', 'rgb(21,83,158)', 'rgb(255,255,255)', 'rgb(25,98,163)', 'rgb(255,255,255)']]
+misc-item-icon-size='Default'
+multi-lined-labels=true
+multi-monitor=false
+override-menu-theme=true
+position-in-panel='Center'
+prefs-visible-page=0
+recently-installed-apps=['com.github.amezin.ddterm.desktop', 'waydroid.com.jndapp.lux.black.iconpack.desktop', 'netflix-web_netflix-web.desktop', 'waydroid.com.instagram.android.desktop']
+runner-position='Centered'
+runner-show-frequent-apps=true
+search-entry-border-radius=(true, 25)
+search-provider-open-windows=true
+show-activities-button=true
+show-hidden-recent-files=true
+update-notifier-project-version=65
+
+[azwallpaper]
+prefs-visible-page=''
+slideshow-current-slide-index=17
+slideshow-current-wallpaper='freebsd.png'
+slideshow-directory='/home/polaroid/.dotfiles/wallpapers/images'
+slideshow-queue=[{'name': 'ALLqk82.png', 'date': '1745230227'}, {'name': 'arch-linux.png', 'date': '1745230226'}, {'name': 'atoms.png', 'date': '1745230226'}, {'name': 'awesome.png', 'date': '1745230226'}, {'name': 'Boxes.png', 'date': '1745230227'}, {'name': 'bunny.png', 'date': '1745230227'}, {'name': 'coding-2.png', 'date': '1745230226'}, {'name': 'coding-3.png', 'date': '1745230227'}, {'name': 'coding.png', 'date': '1745230227'}, {'name': 'dark-bench.png', 'date': '1745230226'}, {'name': 'debian_grey_swirl.png', 'date': '1745230226'}, {'name': 'door.png', 'date': '1745230227'}, {'name': 'dragon.png', 'date': '1745230227'}, {'name': 'elegant.png', 'date': '1745230227'}, {'name': 'finalizer.png', 'date': '1745230227'}, {'name': 'fingerprint.png', 'date': '1745230227'}, {'name': 'fox.png', 'date': '1745230227'}, {'name': 'freebsd.png', 'date': '1745230226'}, {'name': 'gamepad.png', 'date': '1745230226'}, {'name': 'gnu.jpg', 'date': '1745230226'}, {'name': 'great-wave-of-kanagawa-gruvbox.png', 'date': '1745230227'}, {'name': 'gruv-abstract-maze.png', 'date': '1745230227'}, {'name': 'gruv-commit.png', 'date': '1745230226'}, {'name': 'gruv-dev-minimal.png', 'date': '1745230226'}, {'name': 'gruv-estimate.png', 'date': '1745230227'}, {'name': 'gruv-focus.png', 'date': '1745230227'}, {'name': 'gruv-kanji.png', 'date': '1745230226'}, {'name': 'gruv-limits.png', 'date': '1745230227'}, {'name': 'gruv-mistakes.png', 'date': '1745230227'}, {'name': 'gruv-portal-cake.png', 'date': '1745230227'}, {'name': 'gruv-samurai-cyberpunk2077.png', 'date': '1745230226'}, {'name': 'gruv-understand.png', 'date': '1745230227'}, {'name': 'gruv-wallhaven-4yj28l.png', 'date': '1745230227'}, {'name': 'gruv.jpg', 'date': '1745230227'}, {'name': 'gruvb_solarsys.png', 'date': '1745230227'}, {'name': 'gruvbox_astro.jpg', 'date': '1745230227'}, {'name': 'gruvbox_grid.png', 'date': '1745230227'}, {'name': 'gruvbox_kubuntuGear.jpg', 'date': '1745230227'}, {'name': 'gruvbox_minimal_space.png', 'date': '1745230226'}, {'name': 'gruvbox_spac.jpg', 'date': '1745230226'}, {'name': 'gruvbox_tux.png', 'date': '1745230227'}, {'name': 'gruvbox_ubuntu-splash.jpg', 'date': '1745230226'}, {'name': 'gruvbox_ubuntu.png', 'date': '1745230227'}, {'name': 'gruvbox_void_linux.png', 'date': '1745230227'}, {'name': 'gruvbox-linux.png', 'date': '1745230227'}, {'name': 'gruvbox-nix.png', 'date': '1745230227'}, {'name': 'gruvbox-rainbow-nix.png', 'date': '1745230227'}, {'name': 'haz-mat.png', 'date': '1745230226'}, {'name': 'hewlett-packard.png', 'date': '1745230227'}, {'name': 'husky.png', 'date': '1745230227'}, {'name': 'iuh3jkasndjans.jpg', 'date': '1745230227'}, {'name': 'kiddae.jpg', 'date': '1745230227'}, {'name': 'looking-for.png', 'date': '1745230227'}, {'name': 'moon.png', 'date': '1745230226'}, {'name': 'mustacho.png', 'date': '1745230227'}, {'name': 'nasa-2.png', 'date': '1745230226'}, {'name': 'nasa-3.png', 'date': '1745230226'}, {'name': 'nasa.png', 'date': '1745230226'}, {'name': 'nix.png', 'date': '1745230226'}, {'name': 'nixos.png', 'date': '1745230226'}, {'name': 'orbit.png', 'date': '1745230226'}, {'name': 'pacman-ghosts.png', 'date': '1745230227'}, {'name': 'persepolis-shirdal.png', 'date': '1745230227'}, {'name': 'philosophy.png', 'date': '1745230226'}, {'name': 'PJbX0MG.png', 'date': '1745230226'}, {'name': 'red-moon.png', 'date': '1745230227'}, {'name': 'rocket.png', 'date': '1745230226'}, {'name': 'rubiks-cube.png', 'date': '1745230226'}, {'name': 'smile.png', 'date': '1745230226'}, {'name': 'snake.png', 'date': '1745230227'}, {'name': 'solar-system-minimal.png', 'date': '1745230227'}, {'name': 'solar-system.jpg', 'date': '1745230227'}, {'name': 'space-shuttle.png', 'date': '1745230227'}, {'name': 'space.png', 'date': '1745230226'}, {'name': 'starry-sky.png', 'date': '1745230226'}, {'name': 'sunset.png', 'date': '1745230226'}, {'name': 'sve.png', 'date': '1745230226'}, {'name': 'this-wallpaper-is-not-available.png', 'date': '1745230227'}, {'name': 'triangle.png', 'date': '1745230226'}, {'name': 'trisquel-gnu-linux.png', 'date': '1745230227'}, {'name': 'tux.png', 'date': '1745230227'}, {'name': 'UbuntuGnome.png', 'date': '1745230227'}, {'name': 'vim.png', 'date': '1745230227'}, {'name': 'wallhaven-7p6g99.png', 'date': '1745230226'}, {'name': 'wallpaper.png', 'date': '1745230226'}, {'name': 'war-in-space.png', 'date': '1745230227'}, {'name': 'wp11058333.png', 'date': '1745230226'}, {'name': 'zelda_botw.png', 'date': '1745230226'}, {'name': 'zelda.png', 'date': '1745230227'}]
+slideshow-queue-reshuffle-on-complete=true
+slideshow-queue-sort-type='A-Z'
+slideshow-slide-duration=(2, 0, 0)
+slideshow-time-of-slide-start=uint64 1746218173240
+slideshow-timer-remaining=7200
+update-notifier-project-version=11
+
+[blur-my-shell]
+pipelines={'pipeline_default': {'name': <'Default'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_36411775449776'>, 'params': <@a{sv} {}>}>]>}}
+settings-version=2
+
+[blur-my-shell/appfolder]
+brightness=0.59999999999999998
+sigma=30
+
+[blur-my-shell/applications]
+blur=true
+blur-on-overview=false
+dynamic-opacity=true
+enable-all=false
+opacity=141
+whitelist=['org.gnome.Shell.Extensions', 'com.rtosta.zapzap', 'org.gnome.Extensions', 'telegram-desktop_telegram-desktop', 'telegram-desktop_telegram-desktop', 'io.github.mrvladus.List', 'io.github.mrvladus.List', 'pomatez']
+
+[blur-my-shell/coverflow-alt-tab]
+pipeline='pipeline_default'
+
+[blur-my-shell/dash-to-dock]
+blur=false
+brightness=0.59999999999999998
+pipeline='pipeline_default'
+sigma=30
+static-blur=true
+style-dash-to-dock=0
+
+[blur-my-shell/lockscreen]
+pipeline='pipeline_default'
+
+[blur-my-shell/overview]
+pipeline='pipeline_default'
+
+[blur-my-shell/panel]
+blur=false
+brightness=0.59999999999999998
+pipeline='pipeline_default'
+sigma=30
+static-blur=true
+
+[blur-my-shell/screenshot]
+pipeline='pipeline_default'
+
+[blur-my-shell/window-list]
+brightness=0.59999999999999998
+sigma=30
+
+[clipboard-history]
+display-mode=0
+history-size=1000
+topbar-preview-size=21
+window-width-percentage=23
+
+[color-picker]
+color-history=[uint32 2039843, 15457202, 13869198, 2631720, 2631720, 2300975, 2631720, 15457202]
+
+[dash-to-dock]
+always-center-icons=true
+apply-custom-theme=false
+autohide=false
+autohide-in-fullscreen=false
+background-opacity=0.0
+click-action='cycle-windows'
+custom-background-color=false
+custom-theme-customize-running-dots=false
+custom-theme-running-dots-border-color='rgb(255,255,255)'
+custom-theme-running-dots-color='rgb(255,255,255)'
+custom-theme-shrink=true
+dance-urgent-applications=true
+dash-max-icon-size=48
+disable-overview-on-startup=false
+dock-fixed=true
+dock-position='BOTTOM'
+extend-height=true
+height-fraction=0.69999999999999996
+hide-tooltip=true
+hot-keys=true
+icon-size-fixed=false
+intellihide=true
+intellihide-mode='ALWAYS_ON_TOP'
+isolate-locations=true
+isolate-monitors=true
+isolate-workspaces=false
+max-alpha=0.80000000000000004
+middle-click-action='launch'
+multi-monitor=true
+preferred-monitor=-2
+preferred-monitor-by-connector='DP-1'
+preview-size-scale=0.0
+require-pressure-to-show=true
+running-indicator-dominant-color=true
+running-indicator-style='DOTS'
+shift-click-action='minimize'
+shift-middle-click-action='launch'
+show-apps-always-in-the-edge=true
+show-apps-at-top=true
+show-mounts=false
+show-mounts-network=false
+show-mounts-only-mounted=false
+show-trash=false
+show-windows-preview=true
+transparency-mode='FIXED'
+unity-backlit-items=false
+
+[ding]
+check-x11wayland=true
+icon-size='tiny'
+show-home=false
+start-corner='top-right'
+
+[gsconnect]
+devices=['b8ef0a2545574e13a915917b5912ec7c']
+enabled=true
+name='polaroid-desktop'
+
+[gsconnect/device/b8ef0a2545574e13a915917b5912ec7c]
+certificate-pem='-----BEGIN CERTIFICATE-----\nMIIBijCCATGgAwIBAgIBATAKBggqhkjOPQQDBDBPMSkwJwYDVQQDDCBiOGVmMGEy\nNTQ1NTc0ZTEzYTkxNTkxN2I1OTEyZWM3YzEUMBIGA1UECwwLS0RFIENvbm5lY3Qx\nDDAKBgNVBAoMA0tERTAeFw0yNDA0MjcwMzAwMDBaFw0zNTA0MjcwMzAwMDBaME8x\nKTAnBgNVBAMMIGI4ZWYwYTI1NDU1NzRlMTNhOTE1OTE3YjU5MTJlYzdjMRQwEgYD\nVQQLDAtLREUgQ29ubmVjdDEMMAoGA1UECgwDS0RFMFkwEwYHKoZIzj0CAQYIKoZI\nzj0DAQcDQgAEZeIdPwRsfaNefwuJzRhX9przH2togBk3eOT3h0y5cjuM3xyOeL2J\n1R20wHRgRUQOpwrpukvgGOTZVuTi2liXODAKBggqhkjOPQQDBANHADBEAiA5SqMy\nt/LiNdVbGHnR+M9wQykBd3ZvLOL9eZb9mVXKrwIgWZigghM8IMRm/j3yGaorh3fd\nMYIIdrQrskzXE4l7ixU=\n-----END CERTIFICATE-----\n'
+incoming-capabilities=['kdeconnect.battery', 'kdeconnect.bigscreen.stt', 'kdeconnect.clipboard', 'kdeconnect.clipboard.connect', 'kdeconnect.contacts.request_all_uids_timestamps', 'kdeconnect.contacts.request_vcards_by_uid', 'kdeconnect.findmyphone.request', 'kdeconnect.mousepad.keyboardstate', 'kdeconnect.mousepad.request', 'kdeconnect.mpris', 'kdeconnect.mpris.request', 'kdeconnect.notification', 'kdeconnect.notification.action', 'kdeconnect.notification.reply', 'kdeconnect.notification.request', 'kdeconnect.ping', 'kdeconnect.runcommand', 'kdeconnect.sftp.request', 'kdeconnect.share.request', 'kdeconnect.share.request.update', 'kdeconnect.sms.request', 'kdeconnect.sms.request_attachment', 'kdeconnect.sms.request_conversation', 'kdeconnect.sms.request_conversations', 'kdeconnect.systemvolume', 'kdeconnect.telephony.request', 'kdeconnect.telephony.request_mute']
+last-connection='lan://192.168.1.102:1716'
+name='POCO X6 Pro 5G'
+outgoing-capabilities=['kdeconnect.battery', 'kdeconnect.bigscreen.stt', 'kdeconnect.clipboard', 'kdeconnect.clipboard.connect', 'kdeconnect.connectivity_report', 'kdeconnect.contacts.response_uids_timestamps', 'kdeconnect.contacts.response_vcards', 'kdeconnect.findmyphone.request', 'kdeconnect.mousepad.echo', 'kdeconnect.mousepad.keyboardstate', 'kdeconnect.mousepad.request', 'kdeconnect.mpris', 'kdeconnect.mpris.request', 'kdeconnect.notification', 'kdeconnect.notification.request', 'kdeconnect.ping', 'kdeconnect.presenter', 'kdeconnect.runcommand.request', 'kdeconnect.sftp', 'kdeconnect.share.request', 'kdeconnect.sms.attachment_file', 'kdeconnect.sms.messages', 'kdeconnect.systemvolume.request', 'kdeconnect.telephony']
+paired=true
+supported-plugins=['battery', 'clipboard', 'connectivity_report', 'contacts', 'findmyphone', 'mousepad', 'mpris', 'notification', 'ping', 'presenter', 'runcommand', 'sftp', 'share', 'sms', 'systemvolume', 'telephony']
+type='phone'
+
+[gsconnect/device/b8ef0a2545574e13a915917b5912ec7c/plugin/battery]
+custom-battery-notification-value=uint32 80
+
+[gsconnect/device/b8ef0a2545574e13a915917b5912ec7c/plugin/notification]
+applications='{"Impressoras":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Bottles":{"iconName":"com.usebottles.bottles","enabled":true},"Events and Tasks Reminders":{"iconName":"org.gnome.Evolution-alarm-notify","enabled":true},"Zenity":{"iconName":"application-x-executable","enabled":true},"Snapd User Session Agent":{"iconName":"/usr/share/snapd/snapcraft-logo-bird.svg","enabled":true},"Discos":{"iconName":"org.gnome.DiskUtility","enabled":true},"Programas":{"iconName":"org.gnome.Software","enabled":true},"Video Downloader":{"iconName":"/home/polaroid/.dotfiles/icons/images/com.github.unrud.VideoDownloader.svg","enabled":true},"Data & hora":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"ZapZap":{"iconName":"com.rtosta.zapzap","enabled":true},"Miniaplicativo gerenciador de redes":{"iconName":"nm-device-wireless","enabled":true},"Rhythmbox":{"iconName":"org.gnome.Rhythmbox3","enabled":true},"Analisador de uso de discos":{"iconName":"org.gnome.baobab","enabled":true},"Energia":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Cor":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Spotify":{"iconName":"com.spotify.Client","enabled":true},"Backups":{"iconName":"org.gnome.DejaDup","enabled":true},"Arquivos":{"iconName":"org.gnome.Nautilus","enabled":true},"Relógios":{"iconName":"org.gnome.clocks","enabled":true},"File Roller":{"iconName":"org.gnome.FileRoller","enabled":true},"Errands":{"iconName":"/home/polaroid/.dotfiles/icons/images/io.github.mrvladus.List.svg","enabled":true},"Thunderbird":{"iconName":"","enabled":true},"pomatez":{"iconName":"","enabled":true},"Telegram Desktop":{"iconName":"","enabled":true}}'
+
+[gsconnect/device/b8ef0a2545574e13a915917b5912ec7c/plugin/share]
+receive-directory='/home/polaroid/Downloads'
+
+[gsconnect/messaging]
+window-maximized=false
+window-size=(640, 480)
+
+[gsconnect/preferences]
+window-maximized=false
+window-size=(914, 460)
+
+[just-perfection]
+accessibility-menu=true
+activities-button=true
+alt-tab-icon-size=0
+alt-tab-small-icon-size=0
+background-menu=true
+clock-menu=true
+clock-menu-position=0
+clock-menu-position-offset=0
+controls-manager-spacing-size=0
+dash=true
+dash-app-running=true
+dash-icon-size=32
+dash-separator=true
+double-super-to-appgrid=true
+invert-calendar-column-items=false
+keyboard-layout=true
+looking-glass-width=0
+max-displayed-search-results=0
+notification-banner-position=1
+osd=true
+panel=true
+panel-button-padding-size=7
+panel-icon-size=16
+panel-in-overview=true
+panel-indicator-padding-size=4
+panel-notification-icon=true
+panel-size=0
+power-icon=true
+quick-settings=true
+quick-settings-dark-mode=true
+ripple-box=true
+search=true
+show-apps-button=false
+startup-status=1
+support-notifier-showed-version=34
+support-notifier-type=0
+theme=true
+top-panel-position=0
+weather=true
+window-demands-attention-focus=false
+window-menu-take-screenshot-button=true
+window-picker-icon=true
+window-preview-caption=true
+window-preview-close-button=true
+workspace=true
+workspace-background-corner-size=0
+workspace-peek=true
+workspace-popup=true
+workspace-switcher-size=0
+workspace-wrap-around=false
+workspaces-in-app-grid=true
+
+[mediacontrols]
+colored-player-icon=true
+elements-order=['LABEL', 'ICON', 'CONTROLS']
+extension-index=uint32 0
+fixed-label-width=true
+hide-media-notification=false
+label-width=uint32 150
+scroll-labels=false
+show-control-icons-seek-backward=false
+show-control-icons-seek-forward=false
+show-label=true
+show-player-icon=false
+
+[netspeedsimplified]
+fontmode=0
+isvertical=false
+mode=2
+togglebool=false
+
+[openbar]
+accent-color=['0', '0.75', '0.75']
+autofg-bar=true
+autofg-menu=false
+autohg-bar=true
+autohg-menu=true
+autotheme-dark='Dark'
+autotheme-font=true
+autotheme-light='Dark'
+autotheme-refresh=true
+balpha=0.0
+bartype='Islands'
+bcolor=['0.388', '0.514', '0.486']
+bg-change=false
+bgalpha=0.0
+bgcolor=['0.208', '0.243', '0.224']
+bgcolor-wmax=['0.118', '0.118', '0.118']
+bgcolor2=['0.298', '0.259', '0.169']
+bguri='file:///home/polaroid/.dotfiles/wallpapers/images/freebsd.png'
+border-wmax=false
+bottom-margin=8.0999999999999996
+boxalpha=0.0
+boxcolor=['0.208', '0.243', '0.224']
+bradius=9.0
+buttonbg-wmax=true
+bwidth=0.0
+color-scheme='prefer-dark'
+count1=794436
+count10=52
+count11=25
+count12=12
+count2=4032
+count3=508
+count4=286
+count5=198
+count6=147
+count7=144
+count8=90
+count9=70
+dark-bcolor=['0.388', '0.514', '0.486']
+dark-bgcolor=['0.208', '0.243', '0.224']
+dark-bgcolor-wmax=['0.118', '0.118', '0.118']
+dark-bgcolor2=['0.298', '0.259', '0.169']
+dark-bguri='file:///home/polaroid/.dotfiles/wallpapers/images/freebsd.png'
+dark-boxcolor=['0.208', '0.243', '0.224']
+dark-hcolor=['0.463', '0.439', '0.365']
+dark-hscd-color=['0.349', '0.349', '0.349']
+dark-iscolor=['0.208', '0.243', '0.224']
+dark-mbcolor=['0.463', '0.439', '0.365']
+dark-mbgcolor=['0.133', '0.204', '0.180']
+dark-mhcolor=['0.463', '0.439', '0.365']
+dark-mscolor=['0.349', '0.349', '0.349']
+dark-mshcolor=['0.000', '0.000', '0.000']
+dark-palette1=['43', '43', '43']
+dark-palette10=['55', '60', '60']
+dark-palette11=['99', '131', '124']
+dark-palette12=['68', '84', '84']
+dark-palette2=['229', '208', '157']
+dark-palette3=['113', '157', '143']
+dark-palette4=['118', '112', '93']
+dark-palette5=['83', '105', '96']
+dark-palette6=['63', '73', '68']
+dark-palette7=['82', '78', '68']
+dark-palette8=['26', '20', '27']
+dark-palette9=['60', '58', '52']
+dark-shcolor=['0.000', '0.000', '0.000']
+dark-smbgcolor=['0.298', '0.259', '0.169']
+dark-vw-color=['0.349', '0.349', '0.349']
+dark-winbcolor=['0.349', '0.349', '0.349']
+default-font='Sans 12'
+fgalpha=1.0
+fgcolor=['1.0', '1.0', '1.0']
+fitts-widgets=true
+hcolor=['0.463', '0.439', '0.365']
+heffect=false
+height=34.0
+hpad=0.5
+hscd-color=['0.349', '0.349', '0.349']
+import-export=false
+isalpha=0.94999999999999996
+iscolor=['0.208', '0.243', '0.224']
+light-bcolor=['0.102', '0.078', '0.106']
+light-bgcolor=['0.208', '0.243', '0.224']
+light-bgcolor-wmax=['0.922', '0.922', '0.922']
+light-bgcolor2=['0.298', '0.259', '0.169']
+light-bguri='file:///home/polaroid/.dotfiles/wallpapers/images/freebsd.png'
+light-boxcolor=['0.208', '0.243', '0.224']
+light-hcolor=['0.235', '0.227', '0.204']
+light-hscd-color=['0.349', '0.349', '0.349']
+light-iscolor=['0.208', '0.243', '0.224']
+light-mbcolor=['0.235', '0.227', '0.204']
+light-mbgcolor=['0.133', '0.204', '0.180']
+light-mhcolor=['0.235', '0.227', '0.204']
+light-mscolor=['0.349', '0.349', '0.349']
+light-mshcolor=['0.000', '0.000', '0.000']
+light-palette1=['43', '43', '43']
+light-palette10=['55', '60', '60']
+light-palette11=['99', '131', '124']
+light-palette12=['68', '84', '84']
+light-palette2=['229', '208', '157']
+light-palette3=['113', '157', '143']
+light-palette4=['118', '112', '93']
+light-palette5=['83', '105', '96']
+light-palette6=['63', '73', '68']
+light-palette7=['82', '78', '68']
+light-palette8=['26', '20', '27']
+light-palette9=['60', '58', '52']
+light-shcolor=['0.000', '0.000', '0.000']
+light-smbgcolor=['0.298', '0.259', '0.169']
+light-vw-color=['0.349', '0.349', '0.349']
+light-winbcolor=['0.349', '0.349', '0.349']
+margin=0.0
+margin-wmax=1.3999999999999999
+mbcolor=['0.463', '0.439', '0.365']
+mbg-gradient=false
+mbgcolor=['0.133', '0.204', '0.180']
+menu-radius=17.0
+menustyle=true
+mfgalpha=1.0
+mfgcolor=['1.0', '1.0', '1.0']
+mhcolor=['0.463', '0.439', '0.365']
+monitor-height=1080
+monitor-width=1920
+mscolor=['0.349', '0.349', '0.349']
+mshcolor=['0.000', '0.000', '0.000']
+neon=false
+neon-wmax=false
+palette1=['43', '43', '43']
+palette10=['55', '60', '60']
+palette11=['99', '131', '124']
+palette12=['68', '84', '84']
+palette2=['229', '208', '157']
+palette3=['113', '157', '143']
+palette4=['118', '112', '93']
+palette5=['83', '105', '96']
+palette6=['63', '73', '68']
+palette7=['82', '78', '68']
+palette8=['26', '20', '27']
+palette9=['60', '58', '52']
+pause-reload=false
+reloadstyle=false
+set-bottom-margin=true
+set-notif-position=false
+set-overview=true
+shadow=false
+shcolor=['0.000', '0.000', '0.000']
+slider-height=4.0
+smbgcolor=['0.298', '0.259', '0.169']
+smbgoverride=false
+trigger-autotheme=true
+trigger-reload=true
+vpad=4.0
+vw-color=['0.349', '0.349', '0.349']
+winbcolor=['0.349', '0.349', '0.349']
+wmaxbar=false
+
+[screenshot]
+backend='gnome-screenshot'
+click-action='show-menu'
+clipboard-action='none'
+copy-button-action='set-image-data'
+effect-rescale=100
+
+[system-monitor]
+show-download=false
+show-swap=false
+show-upload=false
+
+[tiling-assistant]
+activate-layout0=@as []
+activate-layout1=@as []
+activate-layout2=@as []
+activate-layout3=@as []
+active-window-hint=1
+active-window-hint-color='rgb(119,100,216)'
+auto-tile=@as []
+center-window=@as []
+debugging-free-rects=@as []
+debugging-show-tiled-rects=@as []
+default-move-mode=0
+dynamic-keybinding-behavior=0
+import-layout-examples=false
+last-version-installed=46
+overridden-settings={'org.gnome.mutter.edge-tiling': <@mb nothing>, 'org.gnome.mutter.keybindings.toggle-tiled-left': <@mb nothing>, 'org.gnome.mutter.keybindings.toggle-tiled-right': <@mb nothing>}
+restore-window=['<Super>Down']
+search-popup-layout=@as []
+tile-bottom-half=['<Super>KP_2']
+tile-bottom-half-ignore-ta=@as []
+tile-bottomleft-quarter=['<Super>KP_1']
+tile-bottomleft-quarter-ignore-ta=@as []
+tile-bottomright-quarter=['<Super>KP_3']
+tile-bottomright-quarter-ignore-ta=@as []
+tile-edit-mode=@as []
+tile-left-half=['<Super>Left', '<Super>KP_4']
+tile-left-half-ignore-ta=@as []
+tile-maximize=['<Super>Up', '<Super>KP_5']
+tile-maximize-horizontally=@as []
+tile-maximize-vertically=@as []
+tile-right-half=['<Super>Right', '<Super>KP_6']
+tile-right-half-ignore-ta=@as []
+tile-top-half=['<Super>KP_8']
+tile-top-half-ignore-ta=@as []
+tile-topleft-quarter=['<Super>KP_7']
+tile-topleft-quarter-ignore-ta=@as []
+tile-topright-quarter=['<Super>KP_9']
+tile-topright-quarter-ignore-ta=@as []
+tiling-popup-all-workspace=true
+toggle-always-on-top=@as []
+toggle-tiling-popup=@as []
+
+[top-bar-organizer]
+center-box-order=['dateMenu']
+left-box-order=['activities', 'Media Controls', 'ArcMenu', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'apps-menu', 'places-menu']
+right-box-order=['appindicator-kstatusnotifieritem-vlc', 'workspace-indicator', '/org/gnome/Shell/Extensions/GSConnect/Device/b8ef0a2545574e13a915917b5912ec7c', 'appindicator-kstatusnotifieritem-un-reboot', 'appindicator-kstatusnotifieritem-pomatez1', 'appindicator-kstatusnotifieritem-chrome_status_icon_1', 'ddterm', 'appindicator-kstatusnotifieritem-spotify-client', 'Clipboard History Indicator', 'color-picker@tuberry', 'tiling-assistant@leleat-on-github', 'appindicator-kstatusnotifieritem-livepatch', 'appindicator-kstatusnotifieritem-software-update-available', 'appindicator-kstatusnotifieritem-TelegramDesktop', 'appindicator-kstatusnotifieritem-ZapZap', 'screenRecording', 'screenSharing', 'dwellClick', 'a11y', 'keyboard', 'quickSettings', 'drive-menu']

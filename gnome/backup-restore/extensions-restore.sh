@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# script para restaurar configurações das extensões
+
+# Flag de confirmação automática
+AUTO_CONFIRM=false
+
+# Lê a flag -y, se passada
+while getopts ":y" opt; do
+  case $opt in
+    y)
+      AUTO_CONFIRM=true
+      ;;
+  esac
+done
+
+# Diretório atual
+CURRENT_DIR=$(dirname $(realpath "$0"))
+
+# arquivo de backup
+BACKUP_FILE="$CURRENT_DIR/extensions-settings.dconf"
+
+if [ ! -f "$BACKUP_FILE" ]; then
+    echo "❗ Arquivo de backup não existe"
+else
+    echo -e "\n🔄 Restaurando backup das configurações das extensões GNOME..."
+
+    dconf load /org/gnome/shell/extensions/ < "$BACKUP_FILE"
+
+    echo "✅ Restauração das configurações de extensões concluída"
+fi
+
+if [ "$AUTO_CONFIRM" = true ]; then
+    echo -e "\n🚪 Reinício automático da sessão em 10 segundos, após isso inicie o script novamente para continuar com as demais automações"
+    sleep 10
+    gnome-session-quit --logout --no-prompt
+    exit 0
+fi
+
+echo -e "\n⚠️  É preciso reiniciar a sessão para que todas as configurações das extensões carregam, salve as tarefas atuais antes de prosseguir"
+read -p "deseja reiniciar? note que ao pular essa etapa as configurações das extensões não serão aplicadas corretamente (y/n):" CONFIRM
+
+if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
+    echo -e "\n🚪 Saindo da sessão em 10 segundos, após isso inicie o script novamente para continuar com as demais automações"
+    sleep 10
+
+    gnome-session-quit --logout --no-prompt
+else
+    echo -e "\n⚠️  Reinicie a sessão em outro momento para finalizar as configurações das extensões"
+    echo "aguarde..."
+    sleep 5
+fi

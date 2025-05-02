@@ -34,6 +34,9 @@ else
 fi
 
 # aplicar correção da tela de bloqueio
-bash "$CURRENT_DIR/fix-screen-lock/fix-gnome-screen.sh"
+bash "$CURRENT_DIR/fix-screen-lock/fix-gnome-screen-lock.sh"
+
+# restaura configurações das extensões
+bash "$CURRENT_DIR/backup-restore/extensions-restore.sh" $AUTO_CONFIRM
 
 echo -e "\n✅ Todas as extensões processadas!"
