@@ -1,5 +1,8 @@
+# Diretório atual
+CURRENT_DIR=$(dirname $(realpath "$0"))
+
 # pasta onde ficara os wallpapers
-DEST="$HOME/.dotfiles/wallpapers/images"
+DEST="$CURRENT_DIR/images"
 
 if [ -d "$DEST" ]; then
     echo -e "❗ a pasta images já existe, pulando etapa dos wallpapers\n"
@@ -7,7 +10,7 @@ else
     mkdir -p "$DEST"
 
     # wallpapers compactados
-    ARCHIVE="$HOME/.dotfiles/wallpapers/wallpapers.tar.xz"
+    ARCHIVE="$CURRENT_DIR/wallpapers.tar.xz"
 
     # descompactação dos wallpapers
     echo "⬇️ Descompactando wallpapers..."
