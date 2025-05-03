@@ -4,10 +4,10 @@ blur-my-shell@aunetx
 arcmenu@arcmenu.com
 dash-to-dock@micxgx.gmail.com
 user-theme@gnome-shell-extensions.gcampax.github.com
-ddterm@amezin.github.com
 openbar@neuromorph
 top-bar-organizer@julian.gse.jsts.xyz
 mediacontrols@cliffniff.github.com
 color-picker@tuberry
 just-perfection-desktop@just-perfection
-clipboard-history@alexsaveau.dev
+drive-menu@gnome-shell-extensions.gcampax.github.com
+system-monitor@gnome-shell-extensions.gcampax.github.com
