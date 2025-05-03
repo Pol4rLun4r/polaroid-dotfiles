@@ -2,7 +2,7 @@
 
 # Script principal de instalação de todos os demais instaladores deste diretório
 
-sudo -v #autoriza o sudo no inicio da linha
+sudo -v # Autoriza o sudo no início
 
 # Flag de confirmação automática
 AUTO_CONFIRM=false
@@ -13,27 +13,31 @@ while getopts ":y" opt; do
 done
 
 # Diretório atual
-CURRENT_DIR=$(dirname $(realpath "$0"))
+CURRENT_DIR="$(dirname "$(realpath "$0")")"
 
-if [ "$AUTO_CONFIRM" = true ]; then
+install_scripts() {
+    local AUTO_FLAG=$1
+
     # Instala os Apps Flatpak
-    bash "$CURRENT_DIR/install-flatpaks.sh"
+    if [[ "$AUTO_FLAG" == "-y" ]]; then
+        bash "$CURRENT_DIR/install-flatpaks.sh" -y
+    else
+        bash "$CURRENT_DIR/install-flatpaks.sh"
+    fi
 
     # Instala os Apps Snap
     bash "$CURRENT_DIR/install-snaps.sh"
+}
+
+if [[ "$AUTO_CONFIRM" == true ]]; then
+    install_scripts "-y"
 else 
-    read -p "⬇️  deseja fazer o download dos aplicativos? isso pode levar um tempo (y/n):" CONFIRM
+    read -p "⬇️  Deseja fazer o download dos aplicativos? Isso pode levar um tempo (y/n): " CONFIRM
     echo
 
     if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
-
-        # Instala os Apps Flatpak
-        bash "$CURRENT_DIR/install-flatpaks.sh"
-
-        # Instala os Apps Snap
-        bash "$CURRENT_DIR/install-snaps.sh"
-
+        install_scripts
     else
-        echo "📌 download dos aplicativos pulado"
+        echo "📌 Download dos aplicativos pulado"
     fi
 fi
