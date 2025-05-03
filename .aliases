@@ -1,9 +1,9 @@
 # my shortcuts
 alias c='clear'
 alias update='sudo apt update && sudo apt upgrade -y'
-alias dots='cd ~/.dotfiles'
+alias dots='cd ~/polaroid-dotfiles'
 alias desktop='cd ~/Desktop'
 
 # icones
-alias fix-icons='~/.dotfiles/icons/main.sh'
-alias change-icon='~/.dotfiles/icons/change-icon/main.sh'
+alias fix-icons='~/polaroid-dotfiles/icons/main.sh'
+alias change-icon='~/polaroid-dotfiles/icons/change-icon/main.sh'
