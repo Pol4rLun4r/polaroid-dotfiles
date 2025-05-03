@@ -2,9 +2,12 @@
 
 # script para criar lista de ícones personalizados
  
+# Diretório atual
+CURRENT_DIR=$(dirname $(realpath "$0"))
+
 # Caminho do arquivo icons.list
-ICON_DIR="$HOME/.dotfiles/icons"
-ICON_LIST="$ICON_DIR/icons.list"
+ICON_DIR="$CURRENT_DIR/.."
+ICON_LIST="$CURRENT_DIR/../icons.list"
 
 # Cria o diretório, se não existir
 mkdir -p "$ICON_DIR"
@@ -42,7 +45,7 @@ fi
 
 # Função que adiciona o ícone á lista e cria um link simbólico
 adicionar_icone() {
-    bash "$HOME/.dotfiles/icons/change-icon/symbolic-icon.sh" "$ORIGINAL_NAME" "$APPLICATION_NAME"
+    bash "$CURRENT_DIR/symbolic-icon.sh" "$ORIGINAL_NAME" "$APPLICATION_NAME"
  
     echo "$ORIGINAL_NAME $APPLICATION_NAME $ICON_TYPE" >> "$ICON_LIST"
     echo "✅ Ícone adicionado à lista: $ORIGINAL_NAME -> $APPLICATION_NAME ($ICON_TYPE)"
@@ -63,7 +66,7 @@ if [ -f "$ICON_LIST" ]; then
             sed -i "/^$EXISTING_ORIG $APPLICATION_NAME $ICON_TYPE$/d" "$ICON_LIST"
 
             # Remove ícone antigo
-            OLD_ICON_PATH="$HOME/.dotfiles/icons/images/$APPLICATION_NAME.svg"
+            OLD_ICON_PATH="$CURRENT_DIR/../images/$APPLICATION_NAME.svg"
             
             if [ -f "$OLD_ICON_PATH" ]; then
                 rm "$OLD_ICON_PATH"

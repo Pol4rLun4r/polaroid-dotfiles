@@ -2,57 +2,53 @@
 
 # Script para baixar e instalar o tema de ícones Gruvbox-Plus-Dark
 
-# Diretório dos ícones do sistema
-DEST="$HOME/.local/share/icons"
-mkdir -p "$DEST"
+# Flag de confirmação automática
+AUTO_CONFIRM=false
 
-# Local temporário para manipular o .zip
-TEMP_DIR=$(mktemp -d)
-TEMP="$TEMP_DIR/icons.zip"
+# Lê as opções
+while getopts ":y" opt; do
+  [[ $opt == "y" ]] && AUTO_CONFIRM=true
+done
 
-# api do git que trás o arquivo mais recente
-API_URL="https://api.github.com/repos/SylEleuth/gruvbox-plus-icon-pack/releases/latest"
+download() {
+    # Diretório atual
+    CURRENT_DIR="$(dirname "$(realpath "$0")")"
 
-# pequena "função" para pegar o download direto do repositório (sempre o mais recente)
-ICON_URL=$(wget -qO- "$API_URL" \
-| grep browser_download_url \
-| grep -m 1 '.zip' \
-| cut -d '"' -f 4)
+    echo "🖌️ aplicando ícones..."
 
-if [ ! -d "$HOME/.local/share/icons/Gruvbox-Plus-Dark" ]; then 
-    # Faz download do pacote de ícones
-    echo "⬇️ Baixando tema..."
-    wget --quiet --show-progress --progress=bar:force:noscroll -O "$TEMP" "$ICON_URL"
-    echo "✅ Download completo"
+    # download do icon-pack
+    bash "$CURRENT_DIR/download-iconpack.sh"
 
+    # aplica o pacote de ícones no ubuntu 
+    gsettings set org.gnome.desktop.interface icon-theme "Gruvbox-Plus-Dark"
 
-    # descompacta o pacote de ícones baixados e o direciona ao diretório
-    echo "🗃️ descompactando pacote..."
-
-    if unzip -qo "$TEMP" "Gruvbox-Plus-Dark/*" -d "$DEST"; then
-        echo "✅ Descompactado com sucesso"
+    # aplica o tema escuro para o ubuntu
+    if gsettings list-keys org.gnome.desktop.interface | grep -q color-scheme; then
+        gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
     else
-        echo "❌ Erro ao descompactar"
-        exit 1
+        gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
     fi
 
-    # apaga o arquivo temporário
-    rm -r "$TEMP_DIR"
+    # restauração dos ícones personalizados
+    bash "$CURRENT_DIR/personalized-icons.sh"
+
+    # Corrige ícones personalizados para outros usuários
+    bash "$CURRENT_DIR/fix-icons.sh"
+
+    echo "🎉 Tema de ícones aplicado com sucesso!"
+}
+
+# automação da flag -y
+if [ "$AUTO_CONFIRM" = true ]; then
+    download
+else
+    read -p "⬇️  deseja fazer o download e aplicar os ícones? (y/n):" CONFIRM
+    echo
+
+    if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
+        download
+    else 
+        echo "📌 download dos ícones cancelado"
+        echo "📌 aplicação do pacote de ícones pulada"
+    fi
 fi
-
-echo "🖌️ aplicando ícones..."
-
-# aplica o pacote de ícones no ubuntu 
-gsettings set org.gnome.desktop.interface icon-theme "Gruvbox-Plus-Dark"
-
-# aplica o tema escuro para o ubuntu
-gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-
-
-# restauração dos ícones personalizados
-source ~/.dotfiles/icons/personalized-icons.sh
-
-# Corrige ícones personalizados para outros usuários
-bash "$HOME/.dotfiles/icons/fix-icons.sh"
-
-echo "🎉 Tema de ícones aplicado com sucesso!"

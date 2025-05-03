@@ -3,6 +3,9 @@
 # script para "renomear" ícones da pasta "Gruvbox-plus-dark"
 # e criar um link simbólico no meu dotfiles para manter controle versionado
 
+# Diretório atual
+CURRENT_DIR=$(dirname $(realpath "$0"))
+
 # Nome do ícone original (sem extensão)
 ORIG=$1
 
@@ -10,7 +13,7 @@ ORIG=$1
 APP_NAME=$2
 
 # Diretório onde será salvo o ícone com o nome personalizado
-BACKUP_DIR="$HOME/.dotfiles/icons/images"
+BACKUP_DIR="$CURRENT_DIR/../images"
 
 # Caminho base do tema
 THEME_PATH="$HOME/.local/share/icons/Gruvbox-Plus-Dark/apps/48"

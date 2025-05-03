@@ -4,7 +4,7 @@ Name=Telegram
 Comment=New era of messaging
 X-SnapAppName=telegram-desktop
 Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/telegram-desktop_telegram-desktop.desktop /snap/bin/telegram-desktop -- %u
-Icon=/home/polaroid/.dotfiles/icons/images/telegram-desktop.svg
+Icon=/home/polaroid/polaroid-dotfiles/icons/change-icon/../images/telegram-desktop.svg
 Terminal=false
 StartupWMClass=TelegramDesktop
 Type=Application
@@ -18,5 +18,5 @@ SingleMainWindow=true
 X-SnapAppName=telegram-desktop
 Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/telegram-desktop_telegram-desktop.desktop /snap/bin/telegram-desktop -quit
 Name=Quit Telegram
-Icon=/home/polaroid/.dotfiles/icons/images/telegram-desktop.svg
+Icon=/home/polaroid/polaroid-dotfiles/icons/change-icon/../images/telegram-desktop.svg
 

@@ -1,6 +1,9 @@
 #!/bin/bash
 sudo echo "" #autoriza o sudo no inicio da linha
 
+# Diretório atual
+CURRENT_DIR=$(dirname $(realpath "$0"))
+
 # Verifica se o snap está instalado
 if ! command -v snap &> /dev/null; then
     echo "📦 Snap não encontrado. Instalando..."
@@ -10,7 +13,7 @@ else
 fi
 
 # Verifica se o arquivo de apps existe
-LISTA="$HOME/.dotfiles/apps/snaps.list"
+LISTA="$CURRENT_DIR/snaps.list"
 if [ ! -f "$LISTA" ]; then
     echo "❌ Arquivo $LISTA não encontrado!"
     exit 1

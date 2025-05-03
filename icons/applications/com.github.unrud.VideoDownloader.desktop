@@ -63,13 +63,13 @@ Comment[fi]=Lataa videoita verkosta
 Comment[et]=Laadi alla veebivideoid
 Comment[el]=Λήψη βίντεο από το διαδίκτυο
 Comment[pl]=Pobierz filmy z internetu
-Comment[pt_BR]=Baixe vídeos da web
+Comment[pt_BR]=Baixar vídeos da web
 Comment[eu]=Webguneetako bideoak deskargatu
 Comment[ta]=வலை வீடியோக்களைப் பதிவிறக்கவும்
 Comment[ar]=تنزيل مقاطع فيديو من الويب
 Comment=Download web videos
 Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=video-downloader com.github.unrud.VideoDownloader
-Icon=/home/polaroid/.dotfiles/icons/images/com.github.unrud.VideoDownloader.svg
+Icon=/home/polaroid/polaroid-dotfiles/icons/change-icon/../images/com.github.unrud.VideoDownloader.svg
 Terminal=false
 Type=Application
 Categories=Network;GTK;

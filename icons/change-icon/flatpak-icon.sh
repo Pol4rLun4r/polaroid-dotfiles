@@ -2,6 +2,9 @@
 
 # script para "linkar" e aplicar os ícones personalizados ao sistema
 
+# Diretório atual
+CURRENT_DIR=$(dirname $(realpath "$0"))
+
 # parâmetros recebidos
 APP_NAME=$1 #APPLICATION_NAME
 ORIG_NAME=$2 #ORIGINAL_NAME
@@ -10,24 +13,24 @@ ORIG_NAME=$2 #ORIGINAL_NAME
 SRC_FLATPAK="/var/lib/flatpak/exports/share/applications/${APP_NAME}.desktop"
 
 # Caminho onde será salvo o .desktop modificado (nos dotfiles)
-SRC_BACKUP="$HOME/.dotfiles/icons/applications/${APP_NAME}.desktop"
+SRC_BACKUP="$CURRENT_DIR/../applications/${APP_NAME}.desktop"
 
 # Caminho onde o .desktop será simbolicamente ligado ao sistema
 SRC_SYS="$HOME/.local/share/applications/${APP_NAME}.desktop"
 
 # Caminho do icone personalizado
-SRC_ICON="$HOME/.dotfiles/icons/images/$APP_NAME.svg"
+SRC_ICON="$CURRENT_DIR/../images/$APP_NAME.svg"
 
 # Garante que os diretórios necessários existam
 mkdir -p "$HOME/.local/share/applications"
-mkdir -p "$HOME/.dotfiles/icons/applications"
+mkdir -p "$CURRENT_DIR/../applications"
 
 # Verifica se o .desktop do Flatpak existe
 if [ ! -f "$SRC_FLATPAK" ]; then
     echo "❗ .desktop não encontrado: $SRC_FLATPAK"
 
     # limpar ícones parcialmente criados
-    rm "$HOME/.dotfiles/icons/images/$APPLICATION_NAME.svg"
+    rm "$CURRENT_DIR/../images/$APPLICATION_NAME.svg"
     sed -i "/^$ORIGINAL_NAME/d" "$ICON_LIST"    
 
     echo "🗑️ Ícone removido da lista"

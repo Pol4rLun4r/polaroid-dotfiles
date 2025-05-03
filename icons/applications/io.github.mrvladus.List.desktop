@@ -55,7 +55,7 @@ Comment[zh_TW]=管理待辦事項
 Comment[el]=Διαχειριστείτε τις δουλειές σας
 Comment=Manage your tasks
 Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=errands io.github.mrvladus.List
-Icon=/home/polaroid/.dotfiles/icons/images/io.github.mrvladus.List.svg
+Icon=/home/polaroid/polaroid-dotfiles/icons/change-icon/../images/io.github.mrvladus.List.svg
 Terminal=false
 Type=Application
 Categories=GNOME;GTK;Utility;

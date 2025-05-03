@@ -5,7 +5,7 @@ Comment=Code Editing. Redefined.
 GenericName=Text Editor
 X-SnapAppName=code
 Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/code_code.desktop /snap/bin/code --force-user-env %F
-Icon=/home/polaroid/.dotfiles/icons/images/code.svg
+Icon=/home/polaroid/polaroid-dotfiles/icons/change-icon/../images/code.svg
 Type=Application
 StartupNotify=false
 StartupWMClass=Code
@@ -28,4 +28,4 @@ Name[zh_CN]=新建空窗口
 Name[zh_TW]=開新空視窗
 X-SnapAppName=code
 Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/code_code.desktop /snap/bin/code --force-user-env --new-window %F
-Icon=/home/polaroid/.dotfiles/icons/images/code.svg
+Icon=/home/polaroid/polaroid-dotfiles/icons/change-icon/../images/code.svg

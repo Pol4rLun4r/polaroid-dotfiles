@@ -9,6 +9,6 @@ Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/dialect_dial
 Name=Dialect
 Comment=Translate between languages
 Categories=Network;GTK;
-Icon=/home/polaroid/.dotfiles/icons/images/dialect.svg
+Icon=/home/polaroid/polaroid-dotfiles/icons/change-icon/../images/dialect.svg
 Keywords=translate;translation;
 

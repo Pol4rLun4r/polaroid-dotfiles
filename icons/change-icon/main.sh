@@ -1,7 +1,10 @@
 #!/bin/bash
 
+# Diretório atual
+CURRENT_DIR=$(dirname $(realpath "$0"))
+
 # Diretório onde se encontra a pasta "change-icon"
-SRC_DIR="$HOME/.dotfiles/icons/change-icon"
+SRC_DIR="$CURRENT_DIR"
 
 # Executa o script que define os nomes e o tipo do ícone
 source "$SRC_DIR/create-list-icons.sh"

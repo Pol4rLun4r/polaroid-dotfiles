@@ -33,7 +33,7 @@ bash "$SRC_BASE/gnome/main.sh" $AUTO_CONFIRM
 bash "$SRC_BASE/apps/main.sh" $AUTO_CONFIRM
 
 # aplica o tema de ícones no sistema
-bash "$SRC_BASE/icons/main.sh"
+bash "$SRC_BASE/icons/main.sh" $AUTO_CONFIRM
 
 else
     echo "🔸 Instalação dos dotfiles cancelada"

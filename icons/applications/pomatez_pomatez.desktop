@@ -5,7 +5,7 @@ X-SnapAppName=pomatez
 Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/pomatez_pomatez.desktop /snap/bin/pomatez %U
 Terminal=false
 Type=Application
-Icon=/home/polaroid/.dotfiles/icons/images/pomatez.svg
+Icon=/home/polaroid/polaroid-dotfiles/icons/change-icon/../images/pomatez.svg
 StartupWMClass=Pomatez
 Comment=Attractive pomodoro timer for Windows, Mac, and Linux.
 Categories=Utility;

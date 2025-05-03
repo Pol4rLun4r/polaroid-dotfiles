@@ -108,7 +108,7 @@ X-SnapAppName=thunderbird
 Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/thunderbird_thunderbird.desktop /snap/bin/thunderbird %u
 Terminal=false
 Type=Application
-Icon=/home/polaroid/.dotfiles/icons/images/thunderbird.svg
+Icon=/home/polaroid/polaroid-dotfiles/icons/change-icon/../images/thunderbird.svg
 Categories=Application;Network;Email;
 MimeType=x-scheme-handler/mailto;application/x-xpinstall;x-scheme-handler/webcal;x-scheme-handler/mid;message/rfc822;text/calendar;text/vcard;text/x-vcard;
 StartupNotify=true

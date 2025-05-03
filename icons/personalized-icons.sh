@@ -2,8 +2,11 @@
 
 # script para restauração dos ícones personalizados
 
+# Diretório atual
+CURRENT_DIR=$(dirname $(realpath "$0"))
+
 # Caminho dos .desktop modificados (nos dotfiles)
-SRC_DOTFILES="$HOME/.dotfiles/icons/applications"
+SRC_DOTFILES="$CURRENT_DIR/applications"
 
 # Caminho dos .desktop do sistema
 SRC_SYS="$HOME/.local/share/applications"
@@ -25,7 +28,7 @@ for desktop_file in "$SRC_DOTFILES/"*.desktop; do
     ln -sf "$desktop_file" "$SRC_SYS/$filename"
 
     # Substitui o nome de usuário no caminho do Icon=
-    sed -i "s|/home/[^/]*/\.dotfiles|/home/$USER/.dotfiles|" "$SRC_SYS/$filename"
+    sed -i "s|/home/[^/]*/\polaroid-dotfiles|/home/$USER/polaroid-dotfiles|" "$SRC_SYS/$filename"
 
     echo "🔗 Vinculado: $filename"
 done
