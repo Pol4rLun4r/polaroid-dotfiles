@@ -7,3 +7,7 @@ alias desktop='cd ~/Desktop'
 # icones
 alias fix-icons='~/polaroid-dotfiles/icons/main.sh'
 alias change-icon='~/polaroid-dotfiles/icons/change-icon/main.sh'
+
+# scripts
+alias install-all='~/polaroid-dotfiles/install-all.sh' #instala os scripts
+alias install-all-y='~/polaroid-dotfiles/install-all.sh -y' #instala os scripts mas com a flag -y
