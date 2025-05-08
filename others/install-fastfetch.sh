@@ -7,7 +7,7 @@ sudo -v
 
 echo -e "\n⬇️ Baixando fastfetch"
 
-if [ ! command -v  ]; then
+if [ ! command -v fastfetch ]; then
     echo -e "\n✅ fastfetch já está instalado"
     exit 0
 fi
