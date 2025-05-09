@@ -4,7 +4,7 @@ alias update='sudo apt update && sudo apt upgrade -y'
 alias dots='cd ~/polaroid-dotfiles'
 alias desktop='cd ~/Desktop'
 
-# icones
+# ícones
 alias fix-icons='~/polaroid-dotfiles/icons/main.sh'
 alias change-icon='~/polaroid-dotfiles/icons/change-icon/main.sh'
 
@@ -14,3 +14,4 @@ alias install-all-y='~/polaroid-dotfiles/install-all.sh -y' #instala os scripts 
 alias install-program-ext='~/polaroid-dotfiles/gnome/install-programs.sh' #instala gnome-tweaks e manager-extensions
 alias install-fastfetch='~/polaroid-dotfiles/others/install-fastfetch.sh' #instala o fastfetch
 alias alternative-terminal='~/polaroid-dotfiles/others/set-gnome-console.sh' #instala outro console alternativo (principalmente para erros de layout de teclado)
+alias install-nerdfont='~/polaroid-dotfiles/others/install-nerdfont.sh' #instala uma nerd font compatível com os ícones do powerlevel10k 
