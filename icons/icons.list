@@ -1,6 +1,5 @@
 email thunderbird snap
 code code snap
-utilities-x-terminal chatgpt-desktop snap
 YouTubeDownloader com.github.unrud.VideoDownloader flatpak
 translator dialect snap
 youtube io.freetubeapp.FreeTube flatpak
@@ -9,3 +8,4 @@ com.deepin.Music org.feichtmeier.Musicpod flatpak
 ktimer pomatez snap
 telegram-desktop telegram-desktop snap
 10B4_steam.0 steam snap
+enter-the-gungeon chatgpt-desktop snap
