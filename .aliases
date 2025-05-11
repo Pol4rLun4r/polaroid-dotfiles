@@ -17,5 +17,6 @@ alias install-program-ext='~/polaroid-dotfiles/gnome/install-programs.sh' #insta
 alias install-fastfetch='~/polaroid-dotfiles/others/install-fastfetch.sh' #instala o fastfetch
 alias alternative-terminal='~/polaroid-dotfiles/others/set-gnome-console.sh' #instala outro console alternativo (principalmente para erros de layout de teclado)
 alias install-nerdfont='~/polaroid-dotfiles/others/install-nerdfont.sh' #instala uma nerd font compatível com os ícones do powerlevel10k 
+alias default-terminal='~/polaroid-dotfiles/others/set-gnome-terminal.sh' #retorna ao terminal padrão do gnome
 alias restore-custom-folders='~/polaroid-dotfiles/others/custom-folders/restore-custom-folders.sh' # restaura o icone das pastas customizadas
 alias backup-custom-folders='~/polaroid-dotfiles/others/custom-folders/backup-custom-folders.sh' # faz backup do icone das pastas customizadas

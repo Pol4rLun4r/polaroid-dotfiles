@@ -1,9 +1,11 @@
 #!/bin/bash
 
-# Instala o GNOME Console
-echo "📦 Instalando GNOME Console..."
-sudo apt update
-sudo apt install -y gnome-console
+# Verifica se o kgx está instalado
+if ! command -v kgx &>/dev/null; then
+  echo "📦 Instalando GNOME Console..."
+  sudo apt update
+  sudo apt install -y gnome-console
+fi
 
 # Verifica se o kgx está disponível
 if ! command -v kgx &>/dev/null; then
