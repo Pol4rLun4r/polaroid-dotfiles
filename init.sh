@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Habilitar sudo
-sudo -v 
+## sudo -v 
 
 # Pasta padrão dos dotfiles
 SRC_BASE=$(dirname $(realpath "$0"))
 
-echo -e "📑 Abrindo polaroid-dotfiles\n"
+function initDotFiles() {
+    clear
 
-function WhatToDo() {
     echo -e "📍 O que deseja fazer?\n"
 
     tput bold;  
@@ -16,10 +16,29 @@ function WhatToDo() {
     echo -e "(2) Configurações e instalações secundárias.\n";
     tput sgr0
     echo -e "(q) Sair e não fazer nada.\n"
+
+    tput bold; read -p "Escolha [1/2/q]: " STEP1; tput sgr0
+
+    case $STEP1 in 
+    1)
+    clear
+    echo "Instalando..."
+    ;;
+
+    2)
+    clear
+    echo "Others."
+    ;;
+
+    q)
+    clear
+    exit 0
+    ;;
+
+    *) 
+    initDotFiles
+    ;;
+esac
 }
 
-WhatToDo
-
-tput bold; read -p "Choice [1/2/q]: " STEP1; tput sgr0
-
-echo "${STEP1}"
+initDotFiles
