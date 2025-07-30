@@ -8,7 +8,18 @@ SRC_BASE=$(dirname $(realpath "$0"))
 
 echo -e "📑 Abrindo polaroid-dotfiles\n"
 
-echo "📍 O que deseja fazer?"
-echo "1) Instalações Principais: Extensões, Wallpapers, Apps e Icons"
-echo "2) Configurações e instalações secundárias"
-read STEP1
+function WhatToDo() {
+    echo -e "📍 O que deseja fazer?\n"
+
+    tput bold;  
+    echo -e "(1) Instalações Principais: Extensões, Wallpapers, Apps e Icons.\n"
+    echo -e "(2) Configurações e instalações secundárias.\n";
+    tput sgr0
+    echo -e "(q) Sair e não fazer nada.\n"
+}
+
+WhatToDo
+
+tput bold; read -p "Choice [1/2/q]: " STEP1; tput sgr0
+
+echo "${STEP1}"
