@@ -6,6 +6,9 @@
 # Pasta padrão dos dotfiles
 SRC_BASE=$(dirname $(realpath "$0"))
 
+# pasta das opções
+CHOICES="$SRC_BASE/init"
+
 function initDotFiles() {
     clear
 
@@ -20,25 +23,25 @@ function initDotFiles() {
     tput bold; read -p "Escolha [1/2/q]: " STEP1; tput sgr0
 
     case $STEP1 in 
-    1)
-    clear
-    echo "Instalando..."
-    ;;
+        1)
+        clear
+        bash "$CHOICES/option1.sh"
+        ;;
 
-    2)
-    clear
-    echo "Others."
-    ;;
+        2)
+        clear
+        echo "Instalando... others"
+        ;;
 
-    q)
-    clear
-    exit 0
-    ;;
+        q)
+        clear
+        exit 0
+        ;;
 
-    *) 
-    initDotFiles
-    ;;
-esac
+        *) 
+        initDotFiles
+        ;;
+    esac
 }
 
 initDotFiles
