@@ -14,6 +14,7 @@ function choices() {
     echo -e "(3) Instalar Programas\n"
     echo -e "(4) Baixar e Aplicar Tema e Ícones\n";
     tput sgr0
+    echo -e "(b) Voltar para as o Menu\n"
     echo -e "(q) Sair e não fazer nada.\n"
 
     tput bold; read -p "Escolha [1/2/3/4/q]: " STEP1; tput sgr0
@@ -21,7 +22,7 @@ function choices() {
     case $STEP1 in 
         1)
         clear
-        echo "Baixando Wallpapers"
+        bash "$SRC_BASE/wallpapers/apply-wallpapers.sh"
         ;;
 
         2)
@@ -37,6 +38,10 @@ function choices() {
         4)
         clear
         echo "Baixando tema de ícones"
+        ;;
+
+        b)
+        bash "$SRC_BASE/init.sh"
         ;;
 
         q)
