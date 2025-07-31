@@ -19,6 +19,10 @@ LIST="$CURRENT_DIR/extensions-list.txt"
 # Obtém versão major do GNOME Shell (ex: 44, 45)
 SHELL_VERSION=$(gnome-shell --version | cut -d ' ' -f 3 | cut -d '.' -f 1)
 
+tput bold;
+echo -e "📋 Instalando extensões do arquivo extensions-list.txt...\n";
+tput sgr0
+
 # Verifica se o arquivo existe
 if [ ! -f "$LIST" ]; then
     echo "❌ Arquivo extensions-list.txt não encontrado!"
@@ -105,26 +109,34 @@ done < "$EXTRACTED_EXT"
 STATE="$CURRENT_DIR/../state.txt"
 echo "downloaded" > "$STATE"
 
-echo -e "✅ Processo de download e compilação finalizado!\n"
+tput bold;
+echo -e "\n✅ Processo de download e compilação finalizado!\n";
+tput sgr0
 
 if [ "$AUTO_CONFIRM" = true ]; then
-    echo -e "\n🚪 Reinício automático da sessão em 10 segundos, após isso inicie o script novamente para concluir a instalação"
+    echo -e "\n🚪 Reinício automático da sessão em 10 segundos, após isso inicie o script novamente para concluir a instalação."
     sleep 10
     gnome-session-quit --logout --no-prompt
     exit 0
 fi
 
-echo "⚠️  É preciso reiniciar a sessão para que todas as extensões funcionem corretamente, salve as tarefas atuais antes de prosseguir"
-read -p "deseja reiniciar? note que ao pular essa etapa as extensões não serão instaladas (y/n):" CONFIRM
+echo "⚠️  É preciso reiniciar a sessão para que todas as extensões funcionem corretamente, salve as tarefas atuais antes de prosseguir, note que ao pular essa etapa as extensões não serão instaladas."
+read -p "deseja reiniciar? (y/n):" CONFIRM
 
 if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
-    echo -e "\n🚪 Saindo da sessão em 10 segundos, após isso inicie o script novamente para concluir a instalação"
-    sleep 10
+    clear
+    echo -e "🚪 Saindo da sessão em 5 segundos, após isso inicie o script novamente para concluir a instalação"
+    sleep 5
 
     gnome-session-quit --logout --no-prompt
     exit 0
 else
-    echo -e "\n⚠️  Reinicie a sessão em outro momento para finalizar a instalação das extensões"
-    echo "aguarde..."
+    clear
+
+    tput bold;
+    echo "⚠️  Reinicie a sessão em outro momento para finalizar a instalação das extensões."
+    echo -e "aguarde...\n";
+    tput sgr0
+
     sleep 5
 fi

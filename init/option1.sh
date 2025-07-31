@@ -27,7 +27,7 @@ function choices() {
 
         2)
         clear
-        echo "Baixando Extensões"
+        bash "$SRC_BASE/gnome/main.sh"
         ;;
 
         3)

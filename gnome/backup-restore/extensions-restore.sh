@@ -23,11 +23,11 @@ BACKUP_FILE="$CURRENT_DIR/extensions-settings.dconf"
 if [ ! -f "$BACKUP_FILE" ]; then
     echo "❗ Arquivo de backup não existe"
 else
-    echo -e "\n🔄 Restaurando backup das configurações das extensões GNOME..."
+    echo -e "\n+ Restaurando backup das configurações das extensões GNOME..."
 
     dconf load /org/gnome/shell/extensions/ < "$BACKUP_FILE"
 
-    echo "✅ Restauração das configurações de extensões concluída"
+    echo "+ Restauração das configurações de extensões concluída"
 fi
 
 STATE="$CURRENT_DIR/../state.txt"
@@ -40,17 +40,22 @@ if [ "$AUTO_CONFIRM" = true ]; then
     exit 0
 fi
 
-echo -e "\n⚠️  É preciso reiniciar a sessão para que todas as configurações das extensões carregam, salve as tarefas atuais antes de prosseguir"
-read -p "deseja reiniciar? note que ao pular essa etapa as configurações das extensões não serão aplicadas corretamente (y/n):" CONFIRM
+echo -e "\n⚠️  É preciso reiniciar a sessão para que todas as configurações das extensões carregam, salve as tarefas atuais antes de prosseguir, note que ao pular essa etapa as configurações das extensões não serão aplicadas corretamente."
+read -p "deseja reiniciar?(y/n):" CONFIRM
 
 if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
-    echo -e "\n🚪 Saindo da sessão em 10 segundos, após isso inicie o script novamente para continuar com as demais automações"
-    sleep 10
+    echo -e "\n🚪 Saindo da sessão em 5 segundos, após isso inicie o script novamente para continuar com as demais automações"
+    sleep 5
 
     gnome-session-quit --logout --no-prompt
     exit 0
 else
-    echo -e "\n⚠️  Reinicie a sessão em outro momento para finalizar as configurações das extensões"
-    echo "aguarde..."
-    sleep 5
+    clear
+
+    tput bold;
+    echo -e "⚠️  Reinicie a sessão em outro momento para finalizar as configurações das extensões"
+    echo -e "aguarde...\n";
+    tput sgr0
+
+    sleep 3
 fi

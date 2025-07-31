@@ -16,9 +16,6 @@ done
 # Diretório atual
 CURRENT_DIR=$(dirname $(realpath "$0"))
 
-echo -e "📋 Instalando extensões do arquivo extensions-list.txt...\n"
-echo -e "🔍 Procurando extensões...\n"
-
 # arquivo que informa o script qual etapa ele deve seguir, fazer download ou instalar
 STATE="$CURRENT_DIR/state.txt"
 
@@ -37,4 +34,6 @@ run_if_not_done "installed" "$CURRENT_DIR/download-install/install-extensions.sh
 run_if_not_done "fix-screen" "$CURRENT_DIR/fix-screen-lock/fix-gnome-screen-lock.sh"
 run_if_not_done "ext-restore" "$CURRENT_DIR/backup-restore/extensions-restore.sh"
 
-echo -e "\n✅ Todas as extensões processadas!"
+tput bold;
+echo "✅ Todas as extensões processadas!";
+tput sgr0

@@ -6,7 +6,7 @@ CURRENT_DIR=$(dirname $(realpath "$0"))
 STATE="$CURRENT_DIR/../state.txt"
 echo "fix-screen" >> "$STATE"
 
-echo -e "\n🚀 Aplicando correções para bloqueio de tela no GNOME..."
+echo -e "\n+ Aplicando correções para bloqueio de tela no GNOME..."
 
 # Evitar suspensão automática (AC = energia ligada)
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
@@ -23,5 +23,4 @@ gsettings set org.gnome.desktop.screensaver lock-enabled true
 gsettings set org.gnome.desktop.screensaver ubuntu-lock-on-suspend true
 gsettings set org.gnome.desktop.screensaver idle-activation-enabled true
 
-echo -e "\n✅ Correções aplicadas!"
-echo "ℹ️ Recomendo reiniciar a sessão (logout/login) para garantir que tudo carregue."
+echo "+ Correções aplicadas!"
