@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Habilitar sudo
-## sudo -v 
+sudo -v
 
 # Pasta padrão dos dotfiles
 SRC_BASE=$(dirname $(realpath "$0"))

@@ -17,7 +17,7 @@ function choices() {
     echo -e "(b) Voltar para as o Menu\n"
     echo -e "(q) Sair e não fazer nada.\n"
 
-    tput bold; read -p "Escolha [1/2/3/4/q]: " STEP1; tput sgr0
+    tput bold; read -p "Escolha [1/2/3/4/b/q]: " STEP1; tput sgr0
 
     case $STEP1 in 
         1)
