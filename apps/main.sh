@@ -4,6 +4,12 @@
 
 sudo -v # Autoriza o sudo no início
 
+# Pasta padrão dos dotfiles
+SRC_BASE=$(dirname $(dirname $(realpath "$0")))
+
+# Opções
+source "$SRC_BASE/options/main-facilities.sh"
+
 # Flag de confirmação automática
 AUTO_CONFIRM=false
 
@@ -32,12 +38,20 @@ install_scripts() {
 if [[ "$AUTO_CONFIRM" == true ]]; then
     install_scripts "-y"
 else 
-    read -p "⬇️  Deseja fazer o download dos aplicativos? Isso pode levar um tempo (y/n): " CONFIRM
-    echo
+
+    echo -e "⬇️  Deseja fazer o download dos aplicativos? Isso pode levar um tempo.\n"
+    
+    tput bold;
+    echo -e "(y) Sim, fazer o Download\n"
+    echo -e "(n) Não, voltar para o menu anterior\n";
+    tput sgr0
+
+    tput bold; read -p "Escolha [y/n]: " CONFIRM; tput sgr0
 
     if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
-        install_scripts
+        clear; install_scripts
     else
-        echo "📌 Download dos aplicativos pulado"
+        # echo "📌 Download dos aplicativos cancelado..."
+        mainFacilities
     fi
 fi
