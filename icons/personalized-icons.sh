@@ -30,7 +30,7 @@ for desktop_file in "$SRC_DOTFILES/"*.desktop; do
     # Substitui o nome de usuário no caminho do Icon=
     sed -i "s|/home/[^/]*/\polaroid-dotfiles|/home/$USER/polaroid-dotfiles|" "$SRC_SYS/$filename"
 
-    echo "🔗 Vinculado: $filename"
+    echo "+ Vinculado: $filename"
 done
 
-echo "✅ Todos os atalhos personalizados foram linkados e corrigidos com sucesso!"
+tput bold; echo -e "\n* Todos os atalhos personalizados foram linkados e corrigidos com sucesso!\n"; tput sgr0

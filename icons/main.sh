@@ -2,6 +2,12 @@
 
 # Script para baixar e instalar o tema de ícones Gruvbox-Plus-Dark
 
+# Pasta padrão dos dotfiles
+SRC_BASE=$(dirname $(dirname $(realpath "$0")))
+
+# Opções
+source "$SRC_BASE/options/main-facilities.sh"
+
 # Flag de confirmação automática
 AUTO_CONFIRM=false
 
@@ -14,7 +20,7 @@ download() {
     # Diretório atual
     CURRENT_DIR="$(dirname "$(realpath "$0")")"
 
-    echo "🖌️ aplicando ícones..."
+    tput bold; echo -e "🚀 Aplicando ícones\n"; tput sgr0
 
     # download do icon-pack
     bash "$CURRENT_DIR/download-iconpack.sh"
@@ -35,20 +41,25 @@ download() {
     # Corrige ícones personalizados para outros usuários
     bash "$CURRENT_DIR/fix-icons.sh"
 
-    echo "🎉 Tema de ícones aplicado com sucesso!"
+    tput bold; echo -e "\n🎉 Tema de ícones aplicado com sucesso!"; tput sgr0
 }
 
 # automação da flag -y
 if [ "$AUTO_CONFIRM" = true ]; then
     download
 else
-    read -p "⬇️  deseja fazer o download e aplicar os ícones? (y/n):" CONFIRM
-    echo
+    echo -e "⬇️  Deseja fazer o download e aplicar os ícones?\n"
+
+    tput bold;
+    echo -e "(y) Sim, fazer o Download\n"
+    echo -e "(n) Não, voltar para o menu anterior\n";
+    tput sgr0
+
+    tput bold; read -p "Escolha [y/n]:" CONFIRM; tput sgr0
 
     if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
-        download
+        clear; download
     else 
-        echo "📌 download dos ícones cancelado"
-        echo "📌 aplicação do pacote de ícones pulada"
+        mainFacilities
     fi
 fi

@@ -2,8 +2,6 @@
 
 # Script principal de instalação de todos os demais instaladores deste diretório
 
-sudo -v # Autoriza o sudo no início
-
 # Pasta padrão dos dotfiles
 SRC_BASE=$(dirname $(dirname $(realpath "$0")))
 
@@ -51,7 +49,9 @@ else
     tput bold; read -p "Escolha [y/n]: " CONFIRM; tput sgr0
 
     if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
-        clear; install_scripts
+        clear
+        tput bold; echo -e "🚀 Instalando Apps\n"; tput sgr0 
+        install_scripts
     else
         mainFacilities
     fi

@@ -48,4 +48,4 @@ SRC_LINK="$BACKUP_DIR/$APP_NAME.svg"
 
 # Cria ou atualiza o link simbólico
 ln -sf "$SRC_ICON" "$SRC_LINK"
-echo "🔗 Novo ícone: $APP_NAME, criado"
+echo "+ Novo ícone: $APP_NAME, criado"

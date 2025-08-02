@@ -21,18 +21,18 @@ ICON_URL=$(wget -qO- "$API_URL" \
 
 if [ ! -d "$HOME/.local/share/icons/Gruvbox-Plus-Dark" ]; then 
     # Faz download do pacote de ícones
-    echo "⬇️ Baixando tema..."
+    echo "+ Baixando tema..."
     wget --quiet --show-progress --progress=bar:force:noscroll -O "$TEMP" "$ICON_URL"
-    echo "✅ Download completo"
+    echo -e "\n+ Download completo"
 
 
     # descompacta o pacote de ícones baixados e o direciona ao diretório
-    echo "🗃️ descompactando pacote..."
+    echo "+ Descompactando pacote..."
 
     if unzip -qo "$TEMP" "Gruvbox-Plus-Dark/*" -d "$DEST"; then
-        echo "✅ Descompactado com sucesso"
+        echo -e "+ Descompactado com sucesso\n"
     else
-        echo "❌ Erro ao descompactar"
+        echo -e "\n❌ Erro ao descompactar"
         exit 1
     fi
 
