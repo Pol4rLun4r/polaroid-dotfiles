@@ -33,6 +33,8 @@ install_scripts() {
 
     # Instala os Apps Snap
     bash "$CURRENT_DIR/install-snaps.sh"
+
+    tput bold; echo -e "\n✅ Download e Instalações feitas."; tput sgr0
 }
 
 if [[ "$AUTO_CONFIRM" == true ]]; then
@@ -51,7 +53,6 @@ else
     if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
         clear; install_scripts
     else
-        # echo "📌 Download dos aplicativos cancelado..."
         mainFacilities
     fi
 fi

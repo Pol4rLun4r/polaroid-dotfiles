@@ -6,10 +6,10 @@ CURRENT_DIR=$(dirname $(realpath "$0"))
 
 # Verifica se o snap está instalado
 if ! command -v snap &> /dev/null; then
-    echo "📦 Snap não encontrado. Instalando..."
+    echo "+ Snap não encontrado. Instalando..."
     sudo apt update && sudo apt install -y snapd
 else
-    echo -e "✅ Snap já está instalado.\n"
+    echo -e "+ Snap já está instalado.\n"
 fi
 
 # Verifica se o arquivo de apps existe
@@ -20,7 +20,7 @@ if [ ! -f "$LISTA" ]; then
 fi
 
 # Instala os snaps da lista
-echo "🚀 Instalando Snaps listados em $LISTA..."
+echo "- Instalando Snaps"
 while read -r app; do
     [ -z "$app" ] && continue #Ignora se a linha estiver vazia
 
@@ -29,7 +29,7 @@ while read -r app; do
     FLAG=$(echo "$app" | cut -d ','  -f 2 | xargs)
 
     if snap list | grep -q "^$APP_NAME "; then
-        echo "🔁 $APP_NAME já está instalado. Pulando..."
+        echo "+ $APP_NAME já está instalado."
         continue
     fi
 
@@ -44,4 +44,4 @@ while read -r app; do
 
 done < "$LISTA"
 
-echo "✅ Instalação dos snaps finalizada."
+tput bold; echo -e "\n* Instalação dos snaps finalizada."; tput sgr0
