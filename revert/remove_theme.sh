@@ -12,6 +12,8 @@ SYS_DOT_ICONS="$HOME/.local/share/applications"
 DOT_ICONS="$SRC_BASE/icons/applications"
 
 removeFunction () {
+    clear
+
     if [ ! -d $DEST ]; then
         echo -e "\n! Diretório do tema não existe"
         exit 1
@@ -41,13 +43,13 @@ removeTheme() {
     echo -e "(n) Não, voltar para o menu anterior\n";
     tput sgr0
 
-    tput bold; read -p "Escolha [y/n]:" CONFIRM; tput sgr0
+    tput bold; read -p "Escolha [y/n]: " CONFIRM; tput sgr0
 
     if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
         removeFunction
+        echo "+ Tema e Ícones apagados"
     else 
         initDotFiles
     fi
 
-    echo "+ Tema e Ícones apagados"
 }
