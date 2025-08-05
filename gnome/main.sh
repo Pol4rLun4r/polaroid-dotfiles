@@ -34,6 +34,8 @@ run_if_not_done "installed" "$CURRENT_DIR/download-install/install-extensions.sh
 run_if_not_done "fix-screen" "$CURRENT_DIR/fix-screen-lock/fix-gnome-screen-lock.sh"
 run_if_not_done "ext-restore" "$CURRENT_DIR/backup-restore/extensions-restore.sh"
 
+source "$CURRENT_DIR/reinstall.sh"
+
 tput bold;
 echo "✅ Todas as extensões processadas!";
 tput sgr0

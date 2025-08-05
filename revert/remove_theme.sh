@@ -32,7 +32,7 @@ removeFunction () {
     rm -r "$DEST"
 }
 
-removeTheme() {
+removeTheme () {
     clear
 
     echo  "⚠️  Tem certeza que deseja remover o Tema e seus Ícones?"
