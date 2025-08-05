@@ -15,7 +15,7 @@ removeFunction () {
     clear
 
     if [ ! -d $DEST ]; then
-        echo -e "\n! Diretório do tema não existe"
+        echo "! Diretório do tema não existe"
         exit 1
     fi
 
