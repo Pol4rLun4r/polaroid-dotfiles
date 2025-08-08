@@ -11,12 +11,13 @@
 
 <div align = center>
 
-&ensp;[<kbd>Instalação</kbd>](#-instalação)&ensp;
-&ensp;[<kbd>Funcionalidades</kbd>](#-funcionalidades-principais)&ensp;
+&ensp;[<kbd> <br> Instalação <br> </kbd>](#-instalação)&ensp;
+&ensp;[<kbd> <br> Funcionalidades <br> </kbd>](#-funcionalidades-principais)&ensp;
+&ensp;[<kbd> <br> Reversão <br> </kbd>](#-funcionalidades-de-reversão)&ensp;
 
 </div>
 
-## ✍ Motivação
+## 📝 Motivação
 
 Este projeto é fruto do meu primeiro contato prático com Linux. Há cerca de 6 meses, iniciei minha jornada buscando um sistema operacional mais alinhado aos meus estudos em desenvolvimento web e programação em geral. Com o tempo, fui me aprofundando no ecossistema Linux e acabei me apaixonando pela flexibilidade, filosofia open source e pela comunidade vibrante.
 
@@ -30,19 +31,47 @@ Tenho consciência de que o projeto tem limitações — como o foco exclusivo n
 
 ## 🚀 Funcionalidades Principais
 
-- **Instalação Modular via Menu**: Interface de terminal que guia o usuário na escolha das tarefas.
--  **Personalização Gruvbox**: Wallpapers, tema e ícones inspirados no estilo Gruvbox.
--  **Extensões GNOME**: Baixa, instala e, quando necessário, reinstala extensões para estilizar seu desktop.
--  **Instalação de Programas**: Baixa e instala aplicativos de uso diário.
--  **Mensagens de Confirmação**: Prompt antes de downloads, reinstalações ou alterações críticas.
+- [x] **Instalação Modular via Menu**: Interface de terminal que guia o usuário na escolha das tarefas.
+- [x] **Personalização Gruvbox**: Wallpapers, tema e ícones inspirados no estilo Gruvbox.
+- [x] **Extensões GNOME**: Baixa e instala as seguintes extensões
+    - [ArchMenu](https://extensions.gnome.org/extension/3628/arcmenu/)
+    - [Blur my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell/)
+    - [Color Picker](https://extensions.gnome.org/extension/3396/color-picker/)
+    - [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
+    - [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/)
+    - [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
+    - [Media Controls](https://extensions.gnome.org/extension/4470/media-controls/)
+    - [Open Bar](https://extensions.gnome.org/extension/6580/open-bar/)
+    - [Removable Drive Menu](https://extensions.gnome.org/extension/7/removable-drive-menu/)
+    - [System Monitor](https://extensions.gnome.org/extension/6807/system-monitor/)
+    - [Top Bar Organizer](https://extensions.gnome.org/extension/4356/top-bar-organizer/)
+    - [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
+    - [Wallpaper Slideshow](https://extensions.gnome.org/extension/6281/wallpaper-slideshow/)
+- [x] **Instalação de Programas**: Baixa e instala aplicativos de uso diário, sendo eles os seguintes
+    - [Spotify](https://flathub.org/apps/com.spotify.Client)
+    - [Obsidian](https://flathub.org/apps/md.obsidian.Obsidian)
+    - [MusicPod](https://flathub.org/apps/org.feichtmeier.Musicpod)
+    - [FreeTube](https://flathub.org/apps/search?q=freetube)
+    - [zapzap](https://flathub.org/apps/com.rtosta.zapzap)
+    - [Vesktop](https://flathub.org/apps/dev.vencord.Vesktop)
+    - [AudioRelay](https://flathub.org/apps/net.audiorelay.AudioRelay)
+    - [ExtensionManager](https://flathub.org/apps/com.mattjakeman.ExtensionManager)
+    - [Telegram](https://snapcraft.io/telegram-desktop)
+    - [Thunderbird](https://snapcraft.io/thunderbird)
+    - [VSCode](https://snapcraft.io/code)
+    - [Motrix](https://snapcraft.io/motrix)
+    - [Dialect](https://snapcraft.io/dialect)
+    - [ChatGPT](https://snapcraft.io/chatgpt-desktop-client)
+
+- [x] **Mensagens de Confirmação**: Prompt antes de downloads, reinstalações ou alterações críticas.
 
 ## 🔄 Funcionalidades de Reversão
 
 Caso queira desfazer alterações, há opções de remoção:
 
-- **Apagar Tema Gruvbox** (ícones e cores)
--  **Apagar Wallpapers Gruvbox**
--  **Apagar Extensões GNOME**
+- [x] **Apagar Tema Gruvbox** (ícones e cores)
+- [x] **Apagar Wallpapers Gruvbox**
+- [x] **Apagar Extensões GNOME**
 
 > Não há script para desinstalar programas, pois essa parte exige decisões manuais do usuário.
 
@@ -101,15 +130,15 @@ Esses avisos evitam ações não intencionais e mantêm o controle do usuário.
 
 **As próximas melhorias planejadas incluem:**
 
-- **Atalho global**: Configurar um comando `polar-dot` para executar o script de qualquer diretório do terminal.
+- [ ] **Atalho global**: Configurar um comando `polar-dot` para executar o script de qualquer diretório do terminal.
     
-- **Instalações secundárias**:
+- [ ] **Instalações secundárias**:
     
-    - **Zsh e plugins**: Script para instalar Zsh e plugins populares (ex: oh-my-zsh, powerlevel10k).
-    - **Terminal alternativo**: Instalação e configuração de um terminal como Alacritty.
-    - **Fontes para Zsh**: Instalar fontes Nerd Fonts ou compatíveis para exibição de ícones.
-    - **Fastfetch**: Script para instalar o Fastfetch.
-    - **Alterar Ícone**: Ferramenta para alterar ícones dos apps que foram baixados através de pacotes Snap ou Flatpak.
+    - [ ] **Zsh e plugins**: Script para instalar Zsh e plugins populares (ex: oh-my-zsh, powerlevel10k).
+    - [ ] **Terminal alternativo**: Instalação e configuração de um terminal como Alacritty.
+    - [ ] **Fontes para Zsh**: Instalar fontes Nerd Fonts ou compatíveis para exibição de ícones.
+    - [ ] **Fastfetch**: Script para instalar o Fastfetch.
+    - [ ] **Alterar Ícone**: Ferramenta para alterar ícones dos apps que foram baixados através de pacotes Snap ou Flatpak.
 
 
 ## 🤝 Contribuição
