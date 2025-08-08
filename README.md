@@ -4,7 +4,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/made%20with-bash-blue?style=for-the-badge&logo=gnubash">
   <img src="https://img.shields.io/badge/ubuntu-24.04%20LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white">
-  <img src="https://img.shields.io/github/license/Pol4rLun4r/polaroid-dotfiles?style=for-the-badge">
+  <img src="https://img.shields.io/github/license/Pol4rLun4r/polaroid-dotfiles?style=for-the-badge"> 
 </p>
     <img src=".github/overview.png">
 </h1>
