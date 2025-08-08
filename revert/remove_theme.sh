@@ -3,7 +3,7 @@
 #script que remove o tema Gruvbox (ícones e cores)
 
 # Diretório dos ícones do sistema
-DEST="$HOME/.local/share/icons/Gruvbox-Plus-Dark"
+DEST_THEME="$HOME/.local/share/icons/Gruvbox-Plus-Dark"
 
 # local onde ficam os .desktop do sistema
 SYS_DOT_ICONS="$HOME/.local/share/applications"
@@ -11,10 +11,10 @@ SYS_DOT_ICONS="$HOME/.local/share/applications"
 # .desktop dos ícones
 DOT_ICONS="$SRC_BASE/icons/applications"
 
-removeFunction () {
+removeFunctionTheme () {
     clear
 
-    if [ ! -d $DEST ]; then
+    if [ ! -d $DEST_THEME ]; then
         echo "! Diretório do tema não existe"
         exit 1
     fi
@@ -29,7 +29,7 @@ removeFunction () {
     done 
 
     # apaga a pasta do tema
-    rm -r "$DEST"
+    rm -r "$DEST_THEME"
 }
 
 removeTheme () {
@@ -46,10 +46,9 @@ removeTheme () {
     tput bold; read -p "Escolha [y/n]: " CONFIRM; tput sgr0
 
     if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
-        removeFunction
+        removeFunctionTheme
         echo "+ Tema e Ícones apagados"
     else 
         initDotFiles
     fi
-
 }

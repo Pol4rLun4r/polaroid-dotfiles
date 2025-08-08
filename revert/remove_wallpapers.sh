@@ -3,18 +3,18 @@
 # Script para apagar os wallpapers
 
 # Diretório dos wallpapers
-DEST="$(dirname $(realpath "$0"))/wallpapers/images"
+DEST_WALLPAPER="$(dirname $(realpath "$0"))/wallpapers/images"
 
-removeFunction() {
+removeFunctionWallpaper() {
     clear
 
-    if [ ! -d $DEST ]; then
+    if [ ! -d $DEST_WALLPAPER ]; then
         echo -e "\n! Diretório de wallpapers não existe"
         exit 1
     fi
 
     # apaga a pasta de wallpapers
-    rm -r "$DEST"
+    rm -r "$DEST_WALLPAPER"
 
     sleep 1
 
@@ -35,7 +35,7 @@ removeWallpapers() {
     tput bold; read -p "Escolha [y/n]: " CONFIRM; tput sgr0
 
     if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
-        removeFunction
+        removeFunctionWallpaper
         echo "+ Wallpapers apagados"
     else 
         initDotFiles

@@ -121,7 +121,7 @@ if [ "$AUTO_CONFIRM" = true ]; then
 fi
 
 echo "⚠️  É preciso reiniciar a sessão para que todas as extensões funcionem corretamente, salve as tarefas atuais antes de prosseguir, note que ao pular essa etapa as extensões não serão instaladas."
-read -p "deseja reiniciar? (y/n):" CONFIRM
+read -p "deseja reiniciar? (y/n): " CONFIRM
 
 if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
     clear

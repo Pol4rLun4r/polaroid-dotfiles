@@ -5,7 +5,7 @@
 # arquivo da lista de extensões
 LIST="$(dirname $(realpath "$0"))/gnome/download-install/extensions-list.txt"
 
-removeFunction() {
+removeFunctionExtensions() {
     clear
 
     if [ ! -f $LIST ]; then 
@@ -38,7 +38,7 @@ removeExtensions() {
     tput bold; read -p "Escolha [y/n]: " CONFIRM; tput sgr0
 
     if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
-        removeFunction
+        removeFunctionExtensions
         echo "+ Extensões apagadas"
     else 
         initDotFiles
