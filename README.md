@@ -33,6 +33,8 @@ Tenho consciência de que o projeto tem limitações — como o foco exclusivo n
 
 - [x] **Instalação Modular via Menu**: Interface de terminal que guia o usuário na escolha das tarefas.
 - [x] **Personalização Gruvbox**: Wallpapers, tema e ícones inspirados no estilo Gruvbox.
+    - [Wallpapers](https://gruvbox-wallpapers.pages.dev/)
+    - [Ícones](https://www.gnome-look.org/p/1961046)
 - [x] **Extensões GNOME**: Baixa e instala as seguintes extensões
     - [ArchMenu](https://extensions.gnome.org/extension/3628/arcmenu/)
     - [Blur my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell/)
