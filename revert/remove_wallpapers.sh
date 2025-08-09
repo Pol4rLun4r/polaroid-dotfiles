@@ -17,9 +17,6 @@ removeFunctionWallpaper() {
     rm -r "$DEST_WALLPAPER"
 
     sleep 1
-
-    gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/ubuntu-wallpaper-d.png'
-    gsettings set org.gnome.desktop.background picture-uri-dark 'file:///usr/share/backgrounds/ubuntu-wallpaper-d.png'
 }
 
 removeWallpapers() {

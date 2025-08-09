@@ -9,7 +9,7 @@ CURRENT_DIR=$(dirname $(realpath "$0"))
 BACKUP_FILE="$CURRENT_DIR/extensions-settings.dconf"
 [ -f "$BACKUP_FILE" ] && touch "$BACKUP_FILE"
 
-echo "🔄 Fazendo backup das configurações das extensões GNOME..."
+echo "+ Fazendo backup das configurações das extensões GNOME..."
 
 dconf dump /org/gnome/shell/extensions/ > "$BACKUP_FILE"
 

@@ -6,6 +6,7 @@ CHOICES="$SRC_BASE/options"
 # Opções
 source "$CHOICES/main-facilities.sh" # mainFacilities
 source "$CHOICES/revert.sh" # revertScript
+source "$CHOICES/dev.sh" # devMode
 
 function initDotFiles() {
     clear
@@ -25,6 +26,7 @@ function initDotFiles() {
         1) mainFacilities ;;
         # 2) clear; echo "Instalando... others" ;;
         2) revertScript ;; 
+        dev) devMode ;; # opção oculta, para desenvolvimento.
         q) clear; exit 0 ;;
         *) initDotFiles ;;
     esac
