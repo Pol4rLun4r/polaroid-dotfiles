@@ -30,7 +30,7 @@ Tenho consciência de que o projeto tem limitações — como o foco exclusivo n
 `polaroid-dotfiles` é um conjunto de scripts interativos que automatizam a configuração do seu ambiente **Ubuntu 24.04 LTS**, com foco em personalização visual e instalação de ferramentas de uso frequente. A ideia é reduzir o trabalho manual após formatações, proporcionando um setup rápido e padronizado.
 
 ## 🚀 Funcionalidades Principais
-
+- [x] **Atalho global**: Ao usar o script pela primeira vez, um atalho global(`polar-dot`) será criado para facilitar os próximos usos.
 - [x] **Instalação Modular via Menu**: Interface de terminal que guia o usuário na escolha das tarefas.
 - [x] **Personalização Gruvbox**: Wallpapers, tema e ícones inspirados no estilo Gruvbox.
     - [Wallpapers](https://gruvbox-wallpapers.pages.dev/)
@@ -109,7 +109,7 @@ Caso queira desfazer alterações, há opções de remoção:
 
 ## 🎛️ Uso Interativo
 
-Ao executar `./main.sh`, o **Menu Principal** apresenta as opções:
+Ao executar `./main.sh` ou `polar-dot`(após o primeiro uso do script), o **Menu Principal** apresenta as opções:
 <img src=".github/main.png"/>
 
 - **Confirmações**: Antes de cada ação, são exibidos prompts como:
@@ -131,8 +131,6 @@ Esses avisos evitam ações não intencionais e mantêm o controle do usuário.
 ## 🛠️ Futuras Funcionalidades
 
 **As próximas melhorias planejadas incluem:**
-
-- [ ] **Atalho global**: Configurar um comando `polar-dot` para executar o script de qualquer diretório do terminal.
     
 - [ ] **Instalações secundárias**:
     

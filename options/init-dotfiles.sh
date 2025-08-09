@@ -11,6 +11,10 @@ source "$CHOICES/dev.sh" # devMode
 function initDotFiles() {
     clear
 
+    # texto de dica
+    bash "$SRC_BASE/others/style-text-polar_dot.sh"
+    echo
+
     echo -e "📍 O que deseja fazer?\n"
 
     tput bold;  
