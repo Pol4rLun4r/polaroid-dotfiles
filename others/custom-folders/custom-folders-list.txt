@@ -1,3 +1,0 @@
-.local
-polaroid-dotfiles
-ubuntu-backup
