@@ -6,7 +6,7 @@
 SRC_BASE=$(dirname $(dirname $(realpath "$0")))
 
 # Opções
-source "$SRC_BASE/options/main-facilities.sh"
+source "$SRC_BASE/options/main-features.sh"
 
 # Flag de confirmação automática
 AUTO_CONFIRM=false
@@ -53,6 +53,6 @@ else
         tput bold; echo -e "🚀 Instalando Apps\n"; tput sgr0 
         install_scripts
     else
-        mainFacilities
+        mainFeatures
     fi
 fi

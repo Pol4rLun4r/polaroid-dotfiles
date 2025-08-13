@@ -6,7 +6,7 @@
 SRC_BASE=$(dirname $(dirname $(realpath "$0")))
 
 # Opções
-source "$SRC_BASE/options/main-facilities.sh"
+source "$SRC_BASE/options/main-features.sh"
 
 # Flag de confirmação automática
 AUTO_CONFIRM=false
@@ -60,6 +60,6 @@ else
     if [[ "$CONFIRM" =~ ^[yY]$ ]]; then
         clear; download
     else 
-        mainFacilities
+        mainFeatures
     fi
 fi

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function mainFacilities() {
+function mainFeatures() {
     clear
 
     echo -e "🔧 O que deseja configurar primeiro?\n"
@@ -23,6 +23,6 @@ function mainFacilities() {
         4) clear; bash "$SRC_BASE/icons/main.sh" ;;
         b) bash "$SRC_BASE/main.sh" ;;
         q) clear; exit 0 ;;
-        *) mainFacilities ;;
+        *) mainFeatures ;;
     esac
 }
