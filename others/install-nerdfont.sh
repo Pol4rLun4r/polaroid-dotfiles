@@ -20,7 +20,7 @@ TMP_FILE="$TMP_DIR/hack.zip"
 FONT_DIR="$HOME/.local/share/fonts"
 mkdir -p "$FONT_DIR"
 
-echo -e "\n⬇️ Baixando a font"
+echo -e "+ Baixando a font"
 
 # baixa o arquivo
 if ! wget -qO "$TMP_FILE" "$DOWNLOAD_URL"; then
@@ -46,4 +46,4 @@ rm -r "$TMP_DIR"
 # atualiza cache de fonts
 fc-cache -fv > /dev/null
 
-echo "✅ Fonts baixadas e instaladas com sucesso"
+echo -e "\n✅ Fonts baixadas e instaladas com sucesso"

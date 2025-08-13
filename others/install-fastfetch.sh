@@ -5,10 +5,10 @@
 # ativa o sudo por padrão
 sudo -v
 
-echo -e "\n⬇️ Baixando fastfetch"
+echo -e "\n+ Baixando fastfetch"
 
-if [ ! command -v fastfetch ]; then
-    echo -e "\n✅ fastfetch já está instalado"
+if command -v fastfetch >/dev/null 2>&1; then
+    echo -e "+ Fastfetch já está instalado"
     exit 0
 fi
 
