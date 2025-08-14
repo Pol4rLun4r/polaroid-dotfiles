@@ -7,6 +7,7 @@ reset=$(tput sgr0)
 
 #Opções
 source "$CHOICES/terminals.sh" # terminals
+source "$CHOICES/zsh.sh" # zshOptions
 
 function secondaryFeatures() {
     clear
@@ -15,7 +16,7 @@ function secondaryFeatures() {
 
     echo -e "${bold}(1) Instalar Gnome Tweaks ${reset}(Customizar o básico do Gnome)\n"
     echo -e "${bold}(2) Instalar FastFetch ${reset}(Ferramenta de informação de sistema)\n"
-    echo -e "${bold}(3) Instalar NerdFont ${reset}(Font para usar o ZSH)\n"
+    echo -e "${bold}(3) Instalar ZSH ${reset}(Customizar Terminal)\n"
     echo -e "${bold}(4) Terminais ${reset}(Terminais Alternativos)\n"
 
     echo -e "(b) Voltar para o Menu\n"
@@ -26,7 +27,7 @@ function secondaryFeatures() {
     case $OPTIONS in 
         1) clear; bash "$SRC_BASE/gnome/install-gnome-tweaks.sh" ;;
         2) clear; bash "$SRC_BASE/others/install-fastfetch.sh" ;;
-        3) clear; bash "$SRC_BASE/others/install-nerdfont.sh" ;;
+        3) zshOptions ;;
         4) terminals ;;
         b) bash "$SRC_BASE/main.sh" ;;
         q) clear; exit 0 ;;

@@ -6,8 +6,3 @@ alias desktop='cd ~/Desktop'
 
 # ícones
 alias change-icon='~/polaroid-dotfiles/icons/change-icon/main.sh'
-
-# scripts extras
-alias alternative-terminal='~/polaroid-dotfiles/others/set-gnome-console.sh' #instala outro console alternativo (principalmente para erros de layout de teclado)
-alias install-nerdfont='~/polaroid-dotfiles/others/install-nerdfont.sh' #instala uma nerd font compatível com os ícones do powerlevel10k 
-alias default-terminal='~/polaroid-dotfiles/others/set-gnome-terminal.sh' #retorna ao terminal padrão do gnome
