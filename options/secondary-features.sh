@@ -18,6 +18,7 @@ function secondaryFeatures() {
     echo -e "${bold}(2) Instalar FastFetch ${reset}(Ferramenta de informação de sistema)\n"
     echo -e "${bold}(3) Instalar ZSH ${reset}(Customizar Terminal)\n"
     echo -e "${bold}(4) Terminais ${reset}(Terminais Alternativos)\n"
+    echo -e "${bold}(5) Alterar ícones de Apps ${reset}\n"
 
     echo -e "(b) Voltar para o Menu\n"
     echo -e "(q) Sair e não fazer nada.\n"
@@ -29,6 +30,7 @@ function secondaryFeatures() {
         2) clear; bash "$SRC_BASE/others/install-fastfetch.sh" ;;
         3) zshOptions ;;
         4) terminals ;;
+        5) clear; bash "$SRC_BASE/icons/change-icon/main.sh" ;;
         b) bash "$SRC_BASE/main.sh" ;;
         q) clear; exit 0 ;;
         *) secondaryFeatures ;;
