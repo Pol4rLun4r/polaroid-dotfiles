@@ -15,12 +15,12 @@ while read -r uuid; do
     name_extension=$(echo "$uuid" | cut -d '@' -f 1)
 
     if gnome-extensions list --enabled | grep -Fxq "$uuid"; then
-        echo "✅ A extensão já está ativada: $uuid"
+        echo "+ A extensão já está ativada: $uuid"
         continue
     fi
     
     if gnome-extensions enable "$uuid" 2>/dev/null; then
-        echo "✅ Extensão ativada com sucesso: $name_extension"
+        echo "+ Extensão ativada com sucesso: $name_extension"
         sleep 3
     else
         echo "❌ Falha ao ativar a extensão ou ela não está instalada: $name_extension"

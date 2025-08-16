@@ -29,8 +29,12 @@ fix_dir() {
     echo "$LINE" >> "$PROFILE"
     echo -e "+ Variável XDG_DATA_DIRS adicionada ao $PROFILE\n"
 
+    echo
+    bash "$HOME/polaroid-dotfiles/others/reload-message.sh"
+    echo
+
     tput bold;
-    echo "🚪 Fazendo logout para aplicar mudanças, após isso entre e inicie o script novamente"
+    echo "🚪 Fazendo logout para aplicar mudanças."
     echo "saindo em 10 segundos...";
     tput sgr0
 

@@ -34,7 +34,9 @@ STATE="$CURRENT_DIR/../state.txt"
 echo "ext-restore" >> "$STATE"
 
 if [ "$AUTO_CONFIRM" = true ]; then
-    echo -e "\n🚪 Reinício automático da sessão em 10 segundos, após isso inicie o script novamente para continuar com as demais automações"
+    echo
+    bash "$CURRENT_DIR/../../others/reload-message.sh"
+    echo -e "\n🚪 Reinício automático da sessão em 10 segundos."
     sleep 10
     gnome-session-quit --logout --no-prompt
     exit 0

@@ -5,6 +5,9 @@
 # arquivo da lista de extensões
 LIST="$(dirname $(realpath "$0"))/gnome/download-install/extensions-list.txt"
 
+# arquivo de estado do instalação das extensões
+STATE="$SRC_BASE/gnome/state.txt"
+
 removeFunctionExtensions() {
     clear
 
@@ -13,16 +16,22 @@ removeFunctionExtensions() {
         exit 1
     fi
 
+    echo "+ Aguarde..."
+
     # desativar extensões
     while read -r ext; do
         gnome-extensions disable "$ext"
     done < $LIST
 
+    # apagar arquivo de estado de instalação das extensões
+    if [ -f $STATE ]; then
+        rm -r "$STATE" 
+    fi
+
     # apagar arquivos das extensões
     while read -r ext; do
         rm -rf "$HOME/.local/share/gnome-shell/extensions/$ext"
     done < $LIST
-
 }
 
 removeExtensions() {

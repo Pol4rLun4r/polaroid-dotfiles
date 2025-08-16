@@ -5,7 +5,7 @@ CURRENT_DIR=$(dirname $(realpath "$0"))
 DEST="$CURRENT_DIR/images"
 
 if [ -d "$DEST" ]; then
-    tput bold; echo "❗A pasta images já existe, pulando etapa dos wallpapers"; tput sgr0
+    tput bold; echo "* A pasta images já existe, pulando etapa dos wallpapers"; tput sgr0
 else
     mkdir -p "$DEST"
 

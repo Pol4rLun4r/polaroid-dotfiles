@@ -8,9 +8,12 @@ sudo -v
 # Flag de confirmação automática
 AUTO_CONFIRM=""
 
+# Flag de confirmação
+CONFIRM_INSTALL=false
+
 # Lê as opções
 while getopts ":y" opt; do
-  [[ $opt == "y" ]] && AUTO_CONFIRM="-y"
+  [[ $opt == "y" ]] && AUTO_CONFIRM="-y" && CONFIRM_INSTALL=true
 done
 
 # Diretório atual
@@ -34,8 +37,12 @@ run_if_not_done "installed" "$CURRENT_DIR/download-install/install-extensions.sh
 run_if_not_done "fix-screen" "$CURRENT_DIR/fix-screen-lock/fix-gnome-screen-lock.sh"
 run_if_not_done "ext-restore" "$CURRENT_DIR/backup-restore/extensions-restore.sh"
 
-source "$CURRENT_DIR/reinstall.sh"
+if [[ "$CONFIRM_INSTALL" == false ]]; then
+  source "$CURRENT_DIR/reinstall.sh"
+fi
 
-tput bold;
-echo "✅ Todas as extensões processadas!";
-tput sgr0
+if [[ "$CONFIRM_INSTALL" == true ]]; then
+  tput bold; echo -e "\n🎉 Todas as extensões processadas!\n"; tput sgr0
+else
+  tput bold; echo "🎉 Todas as extensões processadas!"; tput sgr0
+fi

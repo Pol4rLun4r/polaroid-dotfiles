@@ -70,7 +70,7 @@ while read -r uuid; do
 
     # verifica se teve sucesso ao baixar
     if [ -f "$TEMP_FILE" ]; then
-        echo "✅ Sucesso ao baixar: $name_file"
+        echo "+ Sucesso ao baixar: $name_file"
     else
         echo "❗ Falha ao baixar: $name_file"
         continue
@@ -114,8 +114,9 @@ echo -e "\n✅ Processo de download e compilação finalizado!\n";
 tput sgr0
 
 if [ "$AUTO_CONFIRM" = true ]; then
-    echo -e "\n🚪 Reinício automático da sessão em 10 segundos, após isso inicie o script novamente para concluir a instalação."
-    sleep 10
+    bash "$CURRENT_DIR/../../others/reload-message.sh"
+    echo -e "\n🚪 Reinício automático da sessão em 15 segundos"
+    sleep 15
     gnome-session-quit --logout --no-prompt
     exit 0
 fi

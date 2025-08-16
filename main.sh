@@ -11,6 +11,11 @@ if ! which polar-dot > /dev/null 2>&1; then
   sudo ln -s "$SRC_BASE/main.sh" "/usr/local/bin/polar-dot"
 fi
 
+# script para habilitar comando global do `install-all` caso ele não exista
+if ! which dot-install > /dev/null 2>&1; then
+  sudo ln -s "$SRC_BASE/install-all.sh" "/usr/local/bin/dot-install"
+fi
+
 # menu principal do script
 source "$SRC_BASE/options/init-dotfiles.sh"
 
