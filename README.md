@@ -58,6 +58,8 @@ Tenho consciência de que o projeto tem limitações — como o foco exclusivo n
     - [Vesktop](https://flathub.org/apps/dev.vencord.Vesktop)
     - [AudioRelay](https://flathub.org/apps/net.audiorelay.AudioRelay)
     - [ExtensionManager](https://flathub.org/apps/com.mattjakeman.ExtensionManager)
+    - [Add Water](https://flathub.org/apps/dev.qwery.AddWater)
+    - [Warehouse](https://flathub.org/apps/io.github.flattool.Warehouse)
     - [Telegram](https://snapcraft.io/telegram-desktop)
     - [Thunderbird](https://snapcraft.io/thunderbird)
     - [VSCode](https://snapcraft.io/code)
@@ -66,6 +68,7 @@ Tenho consciência de que o projeto tem limitações — como o foco exclusivo n
     - [ChatGPT](https://snapcraft.io/chatgpt-desktop-client)
 
 - [x] **Mensagens de Confirmação**: Prompt antes de downloads, reinstalações ou alterações críticas.
+- [x] **Instalar Tudo**: Faz o download e instala os **Wallpapers, Tema de Ícones, Apps e Extensões do Gnome**
 
 ## 🔄 Funcionalidades de Reversão
 
@@ -76,6 +79,14 @@ Caso queira desfazer alterações, há opções de remoção:
 - [x] **Apagar Extensões GNOME**
 
 > Não há script para desinstalar programas, pois essa parte exige decisões manuais do usuário.
+
+## 🔧 Funcionalidades Extras
+
+- [x] **Zsh e plugins**: Script para instalar Zsh e plugins populares (ex: oh-my-zsh, powerlevel10k), juntamente com uma fonte compatível.
+- [x] **Fastfetch**: Script para instalar o Fastfetch.
+- [x] **Alterar Ícone**: Ferramenta para alterar ícones dos apps que foram baixados através de pacotes Snap ou Flatpak.
+- [x] **Instalar Gnome Tweaks**: Customizar o básico do Gnome
+- [x] **Terminal alternativo**: Instalação e configuração de um terminal alternativo (GnomeConsole).
 
 ## ⚙️ Pré-requisitos
 
@@ -127,20 +138,6 @@ Esses avisos evitam ações não intencionais e mantêm o controle do usuário.
     
 3. Escolher **(2) Reverter Configurações** → selecionar ação desejada
     
-
-## 🛠️ Futuras Funcionalidades
-
-**As próximas melhorias planejadas incluem:**
-    
-- [ ] **Instalações secundárias**:
-    
-    - [ ] **Zsh e plugins**: Script para instalar Zsh e plugins populares (ex: oh-my-zsh, powerlevel10k).
-    - [ ] **Terminal alternativo**: Instalação e configuração de um terminal como Alacritty.
-    - [ ] **Fontes para Zsh**: Instalar fontes Nerd Fonts ou compatíveis para exibição de ícones.
-    - [ ] **Fastfetch**: Script para instalar o Fastfetch.
-    - [ ] **Alterar Ícone**: Ferramenta para alterar ícones dos apps que foram baixados através de pacotes Snap ou Flatpak.
-
-
 ## 🤝 Contribuição
 
 Contribuições são bem-vindas:
