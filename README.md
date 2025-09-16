@@ -60,6 +60,8 @@ Tenho consciência de que o projeto tem limitações — como o foco exclusivo n
     - [ExtensionManager](https://flathub.org/apps/com.mattjakeman.ExtensionManager)
     - [Add Water](https://flathub.org/apps/dev.qwery.AddWater)
     - [Warehouse](https://flathub.org/apps/io.github.flattool.Warehouse)
+    - [A Photo Tool (libre)](https://flathub.org/en/apps/me.ahola.aphototoollibre)
+    - [Ear Tag](https://flathub.org/en/apps/app.drey.EarTag)
     - [Telegram](https://snapcraft.io/telegram-desktop)
     - [Thunderbird](https://snapcraft.io/thunderbird)
     - [VSCode](https://snapcraft.io/code)
