@@ -1,158 +1,125 @@
 <h1 align="center">
-	✨ Polaroid-Dotfiles ✨
-    </br></br>
-<p align="center">
-  <img src="https://img.shields.io/badge/made%20with-bash-blue?style=for-the-badge&logo=gnubash">
-  <img src="https://img.shields.io/badge/ubuntu-24.04%20LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white">
-  <img src="https://img.shields.io/github/license/Pol4rLun4r/polaroid-dotfiles?style=for-the-badge">
-</p>
-    <img src=".github/overview.png">
+  ✨ Polaroid-Dotfiles ✨
 </h1>
 
-<div align = center>
+<p align="center">
+  <img src="https://img.shields.io/badge/made%20with-bash-blue?style=for-the-badge&logo=gnubash" alt="Feito com Bash">
+  <img src="https://img.shields.io/badge/ubuntu-24.04%20LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu 24.04 LTS">
+  <img src="https://img.shields.io/github/license/Pol4rLun4r/polaroid-dotfiles?style=for-the-badge" alt="Licença MIT">
+</p>
 
-&ensp;[<kbd> <br> Instalação <br> </kbd>](#-instalação)&ensp;
-&ensp;[<kbd> <br> Funcionalidades <br> </kbd>](#-funcionalidades-principais)&ensp;
-&ensp;[<kbd> <br> Reversão <br> </kbd>](#-funcionalidades-de-reversão)&ensp;
+<p align="center">
+  <img src=".github/overview.png" alt="Visão geral do desktop configurado">
+</p>
 
-</div>
+<p align="center">
+  <a href="#-instalação">Instalação</a> ·
+  <a href="#-o-que-o-script-configura">Funcionalidades</a> ·
+  <a href="#-comandos-e-uso">Uso</a> ·
+  <a href="#-reversão">Reversão</a>
+</p>
 
-## 📝 Motivação
+## 📝 Sobre o projeto
 
-Este projeto é fruto do meu primeiro contato prático com Linux. Há cerca de 6 meses, iniciei minha jornada buscando um sistema operacional mais alinhado aos meus estudos em desenvolvimento web e programação em geral. Com o tempo, fui me aprofundando no ecossistema Linux e acabei me apaixonando pela flexibilidade, filosofia open source e pela comunidade vibrante.
+O `polaroid-dotfiles` é um conjunto de scripts Bash para preparar e personalizar um desktop **Ubuntu 24.04 LTS com GNOME/Wayland**. Ele reúne tarefas de pós-instalação em um menu interativo: wallpapers, ícones Gruvbox, extensões GNOME, aplicativos, terminal e pequenos ajustes de usabilidade.
 
-Ao conhecer comunidades como a r/LinuxPorn, surgiu a vontade de personalizar ainda mais meu ambiente — no caso, o Ubuntu — para deixá-lo com a minha identidade visual. Durante esse processo, aprendi muito sobre Bash, automação e scripts de pós-instalação. O polaroid-dotfiles nasceu dessa necessidade: evitar retrabalho após reinstalações, mantendo minha estética e ferramentas favoritas com poucos comandos.
+O projeto foi criado para tornar uma reinstalação mais rápida e reproduzível, sem esconder as etapas: cada ação pode ser executada separadamente pelo menu e pede confirmação quando apropriado.
 
-Tenho consciência de que o projeto tem limitações — como o foco exclusivo no Ubuntu 24.04 LTS com Wayland —, mas ele representa meu primeiro passo concreto na criação de soluções automatizadas para o desktop Linux. E acredito que ainda há muito mais por vir.
+## ✨ O que o script configura
 
-## 📖 O que é?
+### Instalações principais
 
-`polaroid-dotfiles` é um conjunto de scripts interativos que automatizam a configuração do seu ambiente **Ubuntu 24.04 LTS**, com foco em personalização visual e instalação de ferramentas de uso frequente. A ideia é reduzir o trabalho manual após formatações, proporcionando um setup rápido e padronizado.
+- **Wallpapers:** extrai o pacote de wallpapers incluído no repositório.
+- **Tema e ícones:** baixa o tema [Gruvbox Plus Dark](https://github.com/SylEleuth/gruvbox-plus-icon-pack), aplica o modo escuro do GNOME e restaura os atalhos de aplicativos com ícones personalizados.
+- **Extensões GNOME:** baixa as extensões compatíveis com a versão atual do GNOME Shell, compila seus schemas, ativa as extensões e restaura as configurações salvas.
+  - AzWallpaper
+  - ArcMenu
+  - Blur my Shell
+  - Color Picker
+  - Dash to Dock
+  - GSConnect
+  - Just Perfection
+  - Media Controls
+  - Open Bar
+  - Removable Drive Menu
+  - System Monitor
+  - Top Bar Organizer
+  - User Themes
+- **Dependências das extensões:** antes da instalação das extensões, instala `gir1.2-gtop-2.0` e `libgtop2-dev`, necessárias para o System Monitor.
+- **Aplicativos:** instala automaticamente os itens das listas em [`apps/flatpaks.list`](apps/flatpaks.list) e [`apps/snaps.list`](apps/snaps.list). Se necessário, configura Flatpak/Flathub e Snap.
 
-## 🚀 Funcionalidades Principais
-- [x] **Atalho global**: Ao usar o script pela primeira vez, um atalho global(`polar-dot`) será criado para facilitar os próximos usos.
-- [x] **Instalação Modular via Menu**: Interface de terminal que guia o usuário na escolha das tarefas.
-- [x] **Personalização Gruvbox**: Wallpapers, tema e ícones inspirados no estilo Gruvbox.
-    - [Wallpapers](https://gruvbox-wallpapers.pages.dev/)
-    - [Ícones](https://www.gnome-look.org/p/1961046)
-- [x] **Extensões GNOME**: Baixa e instala as seguintes extensões
-    - [ArchMenu](https://extensions.gnome.org/extension/3628/arcmenu/)
-    - [Blur my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell/)
-    - [Color Picker](https://extensions.gnome.org/extension/3396/color-picker/)
-    - [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
-    - [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/)
-    - [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
-    - [Media Controls](https://extensions.gnome.org/extension/4470/media-controls/)
-    - [Open Bar](https://extensions.gnome.org/extension/6580/open-bar/)
-    - [Removable Drive Menu](https://extensions.gnome.org/extension/7/removable-drive-menu/)
-    - [System Monitor](https://extensions.gnome.org/extension/6807/system-monitor/)
-    - [Top Bar Organizer](https://extensions.gnome.org/extension/4356/top-bar-organizer/)
-    - [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
-    - [Wallpaper Slideshow](https://extensions.gnome.org/extension/6281/wallpaper-slideshow/)
-- [x] **Instalação de Programas**: Baixa e instala aplicativos de uso diário, sendo eles os seguintes
-    - [Spotify](https://flathub.org/apps/com.spotify.Client)
-    - [Obsidian](https://flathub.org/apps/md.obsidian.Obsidian)
-    - [MusicPod](https://flathub.org/apps/org.feichtmeier.Musicpod)
-    - [FreeTube](https://flathub.org/apps/search?q=freetube)
-    - [zapzap](https://flathub.org/apps/com.rtosta.zapzap)
-    - [Vesktop](https://flathub.org/apps/dev.vencord.Vesktop)
-    - [AudioRelay](https://flathub.org/apps/net.audiorelay.AudioRelay)
-    - [ExtensionManager](https://flathub.org/apps/com.mattjakeman.ExtensionManager)
-    - [Add Water](https://flathub.org/apps/dev.qwery.AddWater)
-    - [Warehouse](https://flathub.org/apps/io.github.flattool.Warehouse)
-    - [A Photo Tool (libre)](https://flathub.org/en/apps/me.ahola.aphototoollibre)
-    - [Ear Tag](https://flathub.org/en/apps/app.drey.EarTag)
-    - [Telegram](https://snapcraft.io/telegram-desktop)
-    - [Thunderbird](https://snapcraft.io/thunderbird)
-    - [VSCode](https://snapcraft.io/code)
-    - [Motrix](https://snapcraft.io/motrix)
-    - [Dialect](https://snapcraft.io/dialect)
-    - [ChatGPT](https://snapcraft.io/chatgpt-desktop-client)
+| Origem | Aplicativos atuais |
+| --- | --- |
+| Flatpak | ZapZap, Extension Manager, Obsidian, Warehouse, Add Water, A Photo Tool (libre), Ear Tag, Secrets, G4Music e Junction |
+| Snap | Dialect e Thunderbird |
 
-- [x] **Mensagens de Confirmação**: Prompt antes de downloads, reinstalações ou alterações críticas.
-- [x] **Instalar Tudo**: Faz o download e instala os **Wallpapers, Tema de Ícones, Apps e Extensões do Gnome**
+### Ferramentas extras
 
-## 🔄 Funcionalidades de Reversão
-
-Caso queira desfazer alterações, há opções de remoção:
-
-- [x] **Apagar Tema Gruvbox** (ícones e cores)
-- [x] **Apagar Wallpapers Gruvbox**
-- [x] **Apagar Extensões GNOME**
-
-> Não há script para desinstalar programas, pois essa parte exige decisões manuais do usuário.
-
-## 🔧 Funcionalidades Extras
-
-- [x] **Zsh e plugins**: Script para instalar Zsh e plugins populares (ex: oh-my-zsh, powerlevel10k), juntamente com uma fonte compatível.
-- [x] **Fastfetch**: Script para instalar o Fastfetch.
-- [x] **Alterar Ícone**: Ferramenta para alterar ícones dos apps que foram baixados através de pacotes Snap ou Flatpak.
-- [x] **Instalar Gnome Tweaks**: Customizar o básico do Gnome
-- [x] **Terminal alternativo**: Instalação e configuração de um terminal alternativo (GnomeConsole).
+- Instalação do **GNOME Tweaks**.
+- Instalação do **Fastfetch**.
+- Instalação e configuração de **Zsh**, Oh My Zsh e Powerlevel10k, usando os arquivos de configuração deste repositório.
+- Instalação da **Hack Nerd Font** para uso no terminal.
+- Alternância entre **GNOME Console** e **GNOME Terminal** como terminal padrão, incluindo o atalho `Ctrl` + `Alt` + `T`.
+- Criação e restauração de ícones personalizados para apps instalados por Flatpak ou Snap.
+- Modo de desenvolvimento "dev" (oculto no menu) para criar backup das configurações das extensões GNOME.
 
 ## ⚙️ Pré-requisitos
 
-- **Sistema**: Ubuntu 24.04 LTS (Wayland)
-    
-- **Permissões**: Acesso a `sudo`
-    
-- **Local de Instalação**: Pasta `~/polaroid-dotfiles`
-    
-- **Conexão com Internet**
-    
+- Ubuntu 24.04 LTS com GNOME e Wayland.
+- Acesso a `sudo`.
+- Conexão com a internet.
+- Repositório clonado em `~/polaroid-dotfiles`. Alguns atalhos e scripts usam esse caminho.
+
+> A instalação de extensões e a configuração inicial do Flatpak podem solicitar logout. Salve seu trabalho antes de prosseguir e execute o script novamente quando for indicado.
 
 ## 💾 Instalação
 
-1. No diretório Home (`~`), clone o repositório e ajuste permissões:
-    
-    ```
-    cd ~
-    git clone https://github.com/Pol4rLun4r/polaroid-dotfiles.git
-    cd polaroid-dotfiles
-    chmod +x main.sh
-    ```
-    
-2. Execute o script principal:
-    
-    ```
-    ./main.sh
-    ```
-    
-3. **Reinício de Sessão**: Devido a limitações do Wayland, algumas tarefas (especialmente extensões GNOME) exigem reiniciar a sessão. O script indicará quando for necessário.
+Clone o repositório no diretório pessoal e execute o menu:
 
-## 🎛️ Uso Interativo
+```bash
+cd ~
+git clone https://github.com/Pol4rLun4r/polaroid-dotfiles.git
+cd polaroid-dotfiles
+chmod +x main.sh install-all.sh
+./main.sh
+```
 
-Ao executar `./main.sh` ou `polar-dot`(após o primeiro uso do script), o **Menu Principal** apresenta as opções:
-<img src=".github/main.png"/>
+Na primeira execução, são criados os comandos globais `polar-dot` e `dot-install` em `/usr/local/bin`.
 
-- **Confirmações**: Antes de cada ação, são exibidos prompts como:
-<img src=".github/confirm-exemple1.png">
-    ou
-<img src=".github/confirm-exemple2.png">
+## 🎛️ Comandos e uso
 
-Esses avisos evitam ações não intencionais e mantêm o controle do usuário.
+| Comando | Ação |
+| --- | --- |
+| `./main.sh` ou `polar-dot` | Abre o menu interativo. |
+| `./install-all.sh` ou `dot-install` | Executa a instalação principal: wallpapers, extensões, ícones e aplicativos. |
 
-## 🔍 Exemplos de Fluxo
+O menu principal separa as tarefas em quatro áreas:
 
-1. Escolher **(1) Instalações Principais[...]** → confirmar **(y)** → entra no submenu
-    
-2. Escolher **(1)** para entrar no submenu das instalações → **(4) Baixar e Aplicar Tema e Ícones** → reiniciar sessão
-    
-3. Escolher **(2) Reverter Configurações** → selecionar ação desejada
-    
+1. Instalações principais: wallpapers, extensões, aplicativos, tema/ícones ou tudo de uma vez.
+2. Configurações secundárias: GNOME Tweaks, Fastfetch, Zsh, fontes, terminais e ícones de apps.
+3. Reversão das instalações principais.
+4. Consulta dos atalhos do terminal e comandos globais.
+
+Após instalar o Zsh, os atalhos configurados incluem `c` (limpar o terminal), `update` (atualizar o sistema), `dots` (abrir `~/polaroid-dotfiles`) e `desktop` (abrir `~/Desktop`).
+
+<p align="center">
+  <img src=".github/main.png" alt="Menu principal do Polaroid-Dotfiles">
+</p>
+
+## 🔄 Reversão
+
+Pelo menu, é possível:
+
+- remover o tema Gruvbox e os atalhos de ícones personalizados;
+- remover os wallpapers extraídos;
+- desativar e remover as extensões listadas pelo projeto.
+
+Os scripts não removem aplicativos instalados. Faça essa remoção manualmente com Flatpak, Snap ou o gerenciador de pacotes que preferir.
+
 ## 🤝 Contribuição
 
-Contribuições são bem-vindas:
-
-1. Fork este repositório
-    
-2. Crie uma branch de feature (`git checkout -b feature/descricao`)
-    
-3. Faça commits com emojis seguindo o padrão do projeto
-    
-4. Abra um Pull Request
-    
+Contribuições são bem-vindas. Faça um fork, crie uma branch para a alteração, teste os scripts no Ubuntu 24.04 e abra um Pull Request explicando a mudança.
 
 ## 📄 Licença
 
-Licenciado sob a MIT [License](LICENSE).
+Licenciado sob a [MIT License](LICENSE).

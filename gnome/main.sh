@@ -32,6 +32,7 @@ run_if_not_done() {
 }
 
 # executa etapas conforme necessário
+run_if_not_done "dependencies" "$CURRENT_DIR/install-dependencies.sh"
 run_if_not_done "downloaded" "$CURRENT_DIR/download-install/download-extensions.sh"
 run_if_not_done "installed" "$CURRENT_DIR/download-install/install-extensions.sh"
 run_if_not_done "fix-screen" "$CURRENT_DIR/fix-screen-lock/fix-gnome-screen-lock.sh"

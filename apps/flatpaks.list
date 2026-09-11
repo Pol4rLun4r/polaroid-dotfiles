@@ -1,7 +1,4 @@
 com.rtosta.zapzap
-com.spotify.Client
-dev.vencord.Vesktop
-io.freetubeapp.FreeTube
 com.mattjakeman.ExtensionManager
 md.obsidian.Obsidian
 io.github.flattool.Warehouse
@@ -11,4 +8,3 @@ app.drey.EarTag
 org.gnome.World.Secrets
 com.github.neithern.g4music
 re.sonny.Junction
-io.github.Foldex.AdwSteamGtk
