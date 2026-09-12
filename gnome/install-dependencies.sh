@@ -9,7 +9,7 @@ sudo -v
 CURRENT_DIR=$(dirname $(realpath "$0"))
 
 echo -e "\n📦 Instalando dependências das extensões GNOME...\n"
-if ! sudo apt install gir1.2-gtop-2.0 libgtop2-dev -y; then
+if ! sudo apt install curl gir1.2-gtop-2.0 libgtop2-dev -y; then
     echo "❌ Não foi possível instalar as dependências das extensões GNOME."
     exit 1
 fi
